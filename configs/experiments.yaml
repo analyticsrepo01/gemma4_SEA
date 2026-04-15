@@ -1,0 +1,66 @@
+# Experiment configurations for Gemma 4 fine-tuning research lab
+
+# Experiment 1: Baseline E4B with default params
+exp001_e4b_baseline:
+  model_id: google/gemma-4-E4B-it
+  use_qlora: true
+  lora_r: 16
+  lora_alpha: 32
+  learning_rate: "2e-4"
+  num_epochs: 1
+  batch_size: 1
+  dataset_split: "train[:5000]"
+  max_length: 2048
+  notes: "Baseline experiment with E4B model, standard QLoRA params"
+
+# Experiment 2: E4B higher LoRA rank
+exp002_e4b_high_rank:
+  model_id: google/gemma-4-E4B-it
+  use_qlora: true
+  lora_r: 32
+  lora_alpha: 64
+  learning_rate: "2e-4"
+  num_epochs: 1
+  batch_size: 1
+  dataset_split: "train[:5000]"
+  max_length: 2048
+  notes: "Higher LoRA rank to see if more params helps"
+
+# Experiment 3: E4B lower learning rate
+exp003_e4b_low_lr:
+  model_id: google/gemma-4-E4B-it
+  use_qlora: true
+  lora_r: 16
+  lora_alpha: 32
+  learning_rate: "1e-4"
+  num_epochs: 1
+  batch_size: 1
+  dataset_split: "train[:5000]"
+  max_length: 2048
+  notes: "Lower LR for more stable training"
+
+# Experiment 4: 26B MoE baseline
+exp004_26b_moe_baseline:
+  model_id: google/gemma-4-26B-A4B-it
+  use_qlora: true
+  lora_r: 16
+  lora_alpha: 32
+  learning_rate: "2e-4"
+  num_epochs: 1
+  batch_size: 1
+  dataset_split: "train[:5000]"
+  max_length: 2048
+  notes: "First 26B MoE experiment after E4B iteration"
+
+# Quick test config (for pipeline validation)
+quick_test:
+  model_id: google/gemma-4-E4B-it
+  use_qlora: true
+  lora_r: 8
+  lora_alpha: 16
+  learning_rate: "2e-4"
+  num_epochs: 1
+  batch_size: 1
+  dataset_split: "train[:100]"
+  max_length: 512
+  notes: "Quick pipeline validation - 100 samples only"
