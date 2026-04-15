@@ -70,6 +70,20 @@ How Gemma 4 stacks up against **62 models** on the [official SEA-HELM leaderboar
 
 > **Generation leap:** Gemma 4 31B dense tops the knowledge charts at **78.77 on Indonesian** — a +14.65 point jump over Gemma 3 27B. The 26B MoE achieves ~93% of 31B's performance with only 4B active parameters per token.
 
+#### Gemma 4 vs GPT-OSS-20B (OpenAI) — Knowledge Pillar
+
+| Language | Gemma 4 31B (31B Dense) | GPT-OSS-20B (3.6B active) | Gemma 4 26B MoE (4B active) | Gemma 4 E4B (8B) |
+|----------|:-----------------------:|:-------------------------:|:---------------------------:|:----------------:|
+| Indonesian (ID) | **78.77** | 70.74 | 72.82 | 59.77 |
+| Vietnamese (VI) | **75.83** | 69.93 | 70.24 | 52.61 |
+| Malay (MS) | **77.33** | 69.90 | 71.36 | 53.52 |
+| Filipino (TL) | **76.12** | 71.84 | 65.80 | 55.29 |
+| Thai (TH) | 56.98 | **60.11** | 49.61 | 43.28 |
+| Burmese (MY) | **66.43** | 49.19 | 53.50 | 42.56 |
+| **Average** | **71.91** | **65.29** | **63.89** | **51.17** |
+
+> **Efficiency spotlight:** OpenAI's GPT-OSS-20B achieves remarkable results with only **3.6B active parameters** (MoE, 21B total). It beats Gemma 4 31B on Thai (+3.1 points) and narrowly edges out the 26B MoE overall (65.29 vs 63.89). However, Gemma 4 31B dense leads by **+6.6 points on average**, dominating on Burmese (+17.2) and Malay (+7.4).
+
 #### 8B-Class Model Comparison
 
 | Model | Size | SEA Overall |

@@ -50,7 +50,6 @@ logs/
 linkedin.md
 
 # Competitor model results (not published)
-results/gpt-oss-20b-baseline/
 results/qwen35-9B-baseline/
 results/qwen35-27B-baseline/
 scripts/run_competitor_evals.sh
