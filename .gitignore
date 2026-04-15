@@ -46,6 +46,9 @@ models/
 *.log
 logs/
 
+# Social media drafts
+linkedin.md
+
 # Large data files
 *.parquet
 *.arrow
