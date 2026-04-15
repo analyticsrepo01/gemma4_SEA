@@ -8,31 +8,33 @@ This project benchmarks Gemma 4 variants across **7 Southeast Asian languages** 
 
 ## Key Findings
 
-### Gemma 4 E4B (8B Dense) — Knowledge Pillar Results
+### Gemma 4 Knowledge Pillar — Head-to-Head Comparison
 
-| Language | Knowledge Score | Rank vs Leaderboard |
-|----------|:--------------:|:-------------------:|
-| Indonesian (ID) | **59.77** | Competitive with Gemma 3 27B (59.74 overall) |
-| Filipino (TL) | **55.29** | — |
-| Malay (MS) | **53.52** | — |
-| Vietnamese (VI) | **52.61** | — |
-| Thai (TH) | **43.28** | — |
-| Burmese (MY) | **42.56** | — |
-| Tamil (TA) | N/A | No knowledge benchmark available |
+| Language | E4B (8B Dense) | 26B MoE (4B active) | Improvement |
+|----------|:--------------:|:-------------------:|:-----------:|
+| Indonesian (ID) | 59.77 | **72.82** | +13.05 |
+| Vietnamese (VI) | 52.61 | **70.24** | +17.63 |
+| Malay (MS) | 53.52 | **71.36** | +17.84 |
+| Filipino (TL) | 55.29 | **65.80** | +10.51 |
+| Burmese (MY) | 42.56 | **53.50** | +10.94 |
+| Thai (TH) | 43.28 | **49.61** | +6.33 |
+| Tamil (TA) | N/A | N/A | — |
 
-> **Insight:** Gemma 4 E4B (8B params) achieves knowledge scores that approach models 3-4x its size on the SEA-HELM leaderboard. Indonesian leads at 59.8%, showing strong multilingual capability for a compact model.
+> **Key Insight:** The 26B MoE model delivers a **+12.7 point average improvement** over the 8B dense model across all languages. The biggest gains are in Malay (+17.8) and Vietnamese (+17.6). Despite only 4B active parameters per token, the MoE architecture significantly outperforms the 8B dense model.
 
-### How Gemma 4 E4B Compares (Knowledge Pillar)
+### SEA-HELM Leaderboard Context
 
-| Model | Size | SEA Overall* |
-|-------|-----:|:------------:|
-| SEA-LION v4 (Qwen) | 32B | 60.82 |
-| Qwen 3 Next | 80B MoE | 60.73 |
-| Gemma 3 | 27B | 59.74 |
-| **Gemma 4 E4B** | **8B** | **59.77 (ID)** |
-| Llama 4 Scout | 109B MoE | 45.54 (MY) |
+| Model | Size | Active Params | Best Language Score (Knowledge) |
+|-------|-----:|:------------:|:------------------------------:|
+| SEA-LION v4 (Qwen) | 32B | 32B | 60.82 (overall)* |
+| Qwen 3 Next | 80B MoE | ~13B | 60.73 (overall)* |
+| SEA-LION v4 (Gemma) | 27B | 27B | 59.84 (overall)* |
+| Gemma 3 | 27B | 27B | 59.74 (overall)* |
+| **Gemma 4 26B MoE** | **26B** | **4B** | **72.82 (ID Knowledge)** |
+| **Gemma 4 E4B** | **8B** | **8B** | **59.77 (ID Knowledge)** |
+| Llama 4 Scout | 109B MoE | ~17B | 45.54 (MY)* |
 
-*\*SEA-HELM leaderboard scores are full-suite (all pillars). Our Knowledge-only scores are not directly comparable but provide directional insight.*
+*\*Leaderboard scores are full-suite (all pillars). Our Knowledge-only scores are not directly comparable but show Gemma 4's strong knowledge capabilities in SEA languages.*
 
 ---
 
@@ -52,21 +54,19 @@ This project benchmarks Gemma 4 variants across **7 Southeast Asian languages** 
 
 ### Languages Evaluated
 
-| Code | Language | Script | Knowledge Score |
-|------|----------|--------|:--------------:|
-| ID | Indonesian | Latin | 59.77 |
-| TL | Filipino | Latin | 55.29 |
-| MS | Malay | Latin | 53.52 |
-| VI | Vietnamese | Latin | 52.61 |
-| TH | Thai | Thai | 43.28 |
-| MY | Burmese | Myanmar | 42.56 |
-| TA | Tamil | Tamil | 0.00* |
-
-*\*Tamil has no Global MMLU Lite or equivalent knowledge benchmark in SEA-HELM.*
+| Code | Language | Script | E4B Knowledge | 26B MoE Knowledge |
+|------|----------|--------|:-------------:|:-----------------:|
+| ID | Indonesian | Latin | 59.77 | **72.82** |
+| VI | Vietnamese | Latin | 52.61 | **70.24** |
+| MS | Malay | Latin | 53.52 | **71.36** |
+| TL | Filipino | Latin | 55.29 | **65.80** |
+| TH | Thai | Thai | 43.28 | **49.61** |
+| MY | Burmese | Myanmar | 42.56 | **53.50** |
+| TA | Tamil | Tamil | N/A | N/A |
 
 ---
 
-## Per-Subject Performance (Global MMLU Lite)
+## Per-Subject Performance — E4B (Global MMLU Lite)
 
 ### Top Performing Subjects (Across Languages)
 
