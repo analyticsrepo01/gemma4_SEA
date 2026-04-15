@@ -1,0 +1,3308 @@
+{
+  "id": {
+    "multi-turn": {
+      "mt-bench": {
+        "inference_time_taken": [],
+        "is_cached": false,
+        "weighted_win_rate": 0,
+        "error": "Failed to run evaluation for task"
+      },
+      "total": 0.0
+    },
+    "nlu": {
+      "sentiment": {
+        "inference_time_taken": [],
+        "is_cached": false,
+        "normalized_accuracy": 0,
+        "error": "Failed to run evaluation for task"
+      },
+      "qa": {
+        "inference_time_taken": [],
+        "is_cached": false,
+        "normalized_f1": 0,
+        "error": "Failed to run evaluation for task"
+      },
+      "metaphor": {
+        "inference_time_taken": [],
+        "is_cached": false,
+        "normalized_accuracy": 0,
+        "error": "Failed to run evaluation for task"
+      },
+      "total": 0.0
+    },
+    "safety": {
+      "toxicity": {
+        "inference_time_taken": [],
+        "is_cached": false,
+        "normalized_accuracy": 0,
+        "error": "Failed to run evaluation for task"
+      },
+      "total": 0.0
+    },
+    "nlg": {
+      "translation-en-xx": {
+        "inference_time_taken": [],
+        "is_cached": false,
+        "normalized_metricx_wmt24_scores": 0,
+        "error": "Failed to run evaluation for task"
+      },
+      "translation-xx-en": {
+        "inference_time_taken": [],
+        "is_cached": false,
+        "normalized_metricx_wmt24_scores": 0,
+        "error": "Failed to run evaluation for task"
+      },
+      "abssum": {
+        "inference_time_taken": [],
+        "is_cached": false,
+        "normalized_rougel_f1": 0,
+        "error": "Failed to run evaluation for task"
+      },
+      "translations": 0.0,
+      "total": 0.0
+    },
+    "nlr": {
+      "causal": {
+        "inference_time_taken": [],
+        "is_cached": false,
+        "normalized_accuracy": 0,
+        "error": "Failed to run evaluation for task"
+      },
+      "nli": {
+        "inference_time_taken": [],
+        "is_cached": false,
+        "normalized_accuracy": 0,
+        "error": "Failed to run evaluation for task"
+      },
+      "total": 0.0
+    },
+    "linguistic-diagnostics": {
+      "mp-r": {
+        "inference_time_taken": [],
+        "is_cached": false,
+        "normalized_accuracy": 0,
+        "error": "Failed to run evaluation for task"
+      },
+      "pragmatic-single": {
+        "inference_time_taken": [],
+        "is_cached": false,
+        "normalized_accuracy": 0,
+        "error": "Failed to run evaluation for task"
+      },
+      "pragmatic-pair": {
+        "inference_time_taken": [],
+        "is_cached": false,
+        "normalized_accuracy": 0,
+        "error": "Failed to run evaluation for task"
+      },
+      "pragmatics": {
+        "subcategories": {
+          "scalar_implicatures": {
+            "accuracy": 0.0,
+            "correct_count": 0,
+            "total_count": 0
+          },
+          "presuppositions": {
+            "accuracy": 0.0,
+            "correct_count": 0,
+            "total_count": 0
+          }
+        },
+        "accuracy": 0.0,
+        "normalized_accuracy": 0
+      },
+      "lindsea": {
+        "normalized_score": 0.0,
+        "subcategories": {}
+      },
+      "total": 0.0
+    },
+    "instruction-following": {
+      "if-eval": {
+        "inference_time_taken": [],
+        "is_cached": false,
+        "overall_lang_normalized_acc": 0,
+        "error": "Failed to run evaluation for task"
+      },
+      "total": 0.0
+    },
+    "knowledge": {
+      "global_mmlu_lite_high_school_geography": {
+        "inference_time_taken": [
+          23.622315372999992
+        ],
+        "is_cached": false,
+        "accuracy": 83.33333333333333,
+        "macro_f1": 83.74999999999999,
+        "null_weighted_f1": 83.75,
+        "normalized_accuracy": 77.77777777777777,
+        "null_count": 0,
+        "errors": {}
+      },
+      "global_mmlu_lite_virology": {
+        "inference_time_taken": [
+          0.45277576000000863
+        ],
+        "is_cached": false,
+        "accuracy": 50.0,
+        "macro_f1": 45.83333333333333,
+        "null_weighted_f1": 45.83333333333333,
+        "normalized_accuracy": 33.33333333333333,
+        "null_count": 0,
+        "errors": {}
+      },
+      "global_mmlu_lite_elementary_mathematics": {
+        "inference_time_taken": [
+          0.4511815829999932
+        ],
+        "is_cached": false,
+        "accuracy": 100.0,
+        "macro_f1": 100.0,
+        "null_weighted_f1": 100.0,
+        "normalized_accuracy": 100.0,
+        "null_count": 0,
+        "errors": {}
+      },
+      "global_mmlu_lite_high_school_chemistry": {
+        "inference_time_taken": [
+          0.6665497169999526
+        ],
+        "is_cached": false,
+        "accuracy": 50.0,
+        "macro_f1": 33.33333333333333,
+        "null_weighted_f1": 66.66666666666666,
+        "normalized_accuracy": 33.33333333333333,
+        "null_count": 0,
+        "errors": {}
+      },
+      "global_mmlu_lite_high_school_world_history": {
+        "inference_time_taken": [
+          1.057495814000049
+        ],
+        "is_cached": false,
+        "accuracy": 75.0,
+        "macro_f1": 69.16666666666667,
+        "null_weighted_f1": 69.16666666666667,
+        "normalized_accuracy": 66.66666666666666,
+        "null_count": 0,
+        "errors": {}
+      },
+      "global_mmlu_lite_professional_psychology": {
+        "inference_time_taken": [
+          0.636610778999966
+        ],
+        "is_cached": false,
+        "accuracy": 83.33333333333333,
+        "macro_f1": 83.75,
+        "null_weighted_f1": 83.74999999999999,
+        "normalized_accuracy": 77.77777777777777,
+        "null_count": 0,
+        "errors": {}
+      },
+      "global_mmlu_lite_moral_disputes": {
+        "inference_time_taken": [
+          0.5189473340000177
+        ],
+        "is_cached": false,
+        "accuracy": 79.16666666666666,
+        "macro_f1": 79.16666666666666,
+        "null_weighted_f1": 79.16666666666666,
+        "normalized_accuracy": 72.22222222222221,
+        "null_count": 0,
+        "errors": {}
+      },
+      "global_mmlu_lite_professional_accounting": {
+        "inference_time_taken": [
+          0.8231958000000077
+        ],
+        "is_cached": false,
+        "accuracy": 81.25,
+        "macro_f1": 81.15079365079364,
+        "null_weighted_f1": 81.15079365079364,
+        "normalized_accuracy": 75.0,
+        "null_count": 0,
+        "errors": {}
+      },
+      "global_mmlu_lite_high_school_european_history": {
+        "inference_time_taken": [
+          1.0336623670000336
+        ],
+        "is_cached": false,
+        "accuracy": 91.66666666666666,
+        "macro_f1": 89.99999999999999,
+        "null_weighted_f1": 90.0,
+        "normalized_accuracy": 88.88888888888889,
+        "null_count": 0,
+        "errors": {}
+      },
+      "global_mmlu_lite_high_school_physics": {
+        "inference_time_taken": [
+          0.6680107920000182
+        ],
+        "is_cached": false,
+        "accuracy": 83.33333333333333,
+        "macro_f1": 81.25,
+        "null_weighted_f1": 81.25,
+        "normalized_accuracy": 77.77777777777777,
+        "null_count": 0,
+        "errors": {}
+      },
+      "global_mmlu_lite_philosophy": {
+        "inference_time_taken": [
+          0.5642243490000283
+        ],
+        "is_cached": false,
+        "accuracy": 91.66666666666666,
+        "macro_f1": 91.42857142857143,
+        "null_weighted_f1": 91.42857142857143,
+        "normalized_accuracy": 88.88888888888889,
+        "null_count": 0,
+        "errors": {}
+      },
+      "global_mmlu_lite_prehistory": {
+        "inference_time_taken": [
+          0.5623677140000609
+        ],
+        "is_cached": false,
+        "accuracy": 100.0,
+        "macro_f1": 100.0,
+        "null_weighted_f1": 100.0,
+        "normalized_accuracy": 100.0,
+        "null_count": 0,
+        "errors": {}
+      },
+      "global_mmlu_lite_public_relations": {
+        "inference_time_taken": [
+          0.5277164809999704
+        ],
+        "is_cached": false,
+        "accuracy": 93.75,
+        "macro_f1": 91.42857142857143,
+        "null_weighted_f1": 91.42857142857143,
+        "normalized_accuracy": 91.66666666666666,
+        "null_count": 0,
+        "errors": {}
+      },
+      "global_mmlu_lite_college_medicine": {
+        "inference_time_taken": [
+          0.28894622799998615
+        ],
+        "is_cached": false,
+        "accuracy": 100.0,
+        "macro_f1": 100.0,
+        "null_weighted_f1": 100.0,
+        "normalized_accuracy": 100.0,
+        "null_count": 0,
+        "errors": {}
+      },
+      "global_mmlu_lite_management": {
+        "inference_time_taken": [
+          0.5664796610000167
+        ],
+        "is_cached": false,
+        "accuracy": 93.75,
+        "macro_f1": 93.65079365079364,
+        "null_weighted_f1": 93.65079365079364,
+        "normalized_accuracy": 91.66666666666666,
+        "null_count": 0,
+        "errors": {}
+      },
+      "global_mmlu_lite_jurisprudence": {
+        "inference_time_taken": [
+          0.48619977700002437
+        ],
+        "is_cached": false,
+        "accuracy": 100.0,
+        "macro_f1": 100.0,
+        "null_weighted_f1": 100.0,
+        "normalized_accuracy": 100.0,
+        "null_count": 0,
+        "errors": {}
+      },
+      "global_mmlu_lite_human_sexuality": {
+        "inference_time_taken": [
+          0.516900392000025
+        ],
+        "is_cached": false,
+        "accuracy": 91.66666666666666,
+        "macro_f1": 91.42857142857143,
+        "null_weighted_f1": 91.42857142857143,
+        "normalized_accuracy": 88.88888888888889,
+        "null_count": 0,
+        "errors": {}
+      },
+      "global_mmlu_lite_high_school_statistics": {
+        "inference_time_taken": [
+          0.582425624999928
+        ],
+        "is_cached": false,
+        "accuracy": 87.5,
+        "macro_f1": 86.66666666666666,
+        "null_weighted_f1": 86.66666666666667,
+        "normalized_accuracy": 83.33333333333334,
+        "null_count": 0,
+        "errors": {}
+      },
+      "global_mmlu_lite_electrical_engineering": {
+        "inference_time_taken": [
+          0.32827788800000235
+        ],
+        "is_cached": false,
+        "accuracy": 100.0,
+        "macro_f1": 100.0,
+        "null_weighted_f1": 100.0,
+        "normalized_accuracy": 100.0,
+        "null_count": 0,
+        "errors": {}
+      },
+      "global_mmlu_lite_professional_medicine": {
+        "inference_time_taken": [
+          0.36799943500000154
+        ],
+        "is_cached": false,
+        "accuracy": 100.0,
+        "macro_f1": 100.0,
+        "null_weighted_f1": 100.0,
+        "normalized_accuracy": 100.0,
+        "null_count": 0,
+        "errors": {}
+      },
+      "global_mmlu_lite_high_school_macroeconomics": {
+        "inference_time_taken": [
+          0.5386850000001004
+        ],
+        "is_cached": false,
+        "accuracy": 100.0,
+        "macro_f1": 100.0,
+        "null_weighted_f1": 100.0,
+        "normalized_accuracy": 100.0,
+        "null_count": 0,
+        "errors": {}
+      },
+      "global_mmlu_lite_high_school_government_and_politics": {
+        "inference_time_taken": [
+          0.39071136800009754
+        ],
+        "is_cached": false,
+        "accuracy": 75.0,
+        "macro_f1": 66.66666666666666,
+        "null_weighted_f1": 66.66666666666666,
+        "normalized_accuracy": 66.66666666666666,
+        "null_count": 0,
+        "errors": {}
+      },
+      "global_mmlu_lite_human_aging": {
+        "inference_time_taken": [
+          0.6289447499999596
+        ],
+        "is_cached": false,
+        "accuracy": 81.25,
+        "macro_f1": 81.15079365079364,
+        "null_weighted_f1": 81.15079365079364,
+        "normalized_accuracy": 75.0,
+        "null_count": 0,
+        "errors": {}
+      },
+      "global_mmlu_lite_college_chemistry": {
+        "inference_time_taken": [
+          0.31621854299999086
+        ],
+        "is_cached": false,
+        "accuracy": 100.0,
+        "macro_f1": 100.0,
+        "null_weighted_f1": 100.0,
+        "normalized_accuracy": 100.0,
+        "null_count": 0,
+        "errors": {}
+      },
+      "global_mmlu_lite_high_school_microeconomics": {
+        "inference_time_taken": [
+          0.28499452300002304
+        ],
+        "is_cached": false,
+        "accuracy": 50.0,
+        "macro_f1": 33.33333333333333,
+        "null_weighted_f1": 50.0,
+        "normalized_accuracy": 33.33333333333333,
+        "null_count": 0,
+        "errors": {}
+      },
+      "global_mmlu_lite_global_facts": {
+        "inference_time_taken": [
+          0.6660873079999874
+        ],
+        "is_cached": false,
+        "accuracy": 58.33333333333333,
+        "macro_f1": 58.63636363636364,
+        "null_weighted_f1": 58.63636363636363,
+        "normalized_accuracy": 44.444444444444436,
+        "null_count": 0,
+        "errors": {}
+      },
+      "global_mmlu_lite_marketing": {
+        "inference_time_taken": [
+          0.5271749080000063
+        ],
+        "is_cached": false,
+        "accuracy": 87.5,
+        "macro_f1": 88.09523809523809,
+        "null_weighted_f1": 88.09523809523809,
+        "normalized_accuracy": 83.33333333333334,
+        "null_count": 0,
+        "errors": {}
+      },
+      "global_mmlu_lite_high_school_psychology": {
+        "inference_time_taken": [
+          0.5687883020000299
+        ],
+        "is_cached": false,
+        "accuracy": 79.16666666666666,
+        "macro_f1": 78.0952380952381,
+        "null_weighted_f1": 78.09523809523809,
+        "normalized_accuracy": 72.22222222222221,
+        "null_count": 0,
+        "errors": {}
+      },
+      "global_mmlu_lite_professional_law": {
+        "inference_time_taken": [
+          1.260889657000007
+        ],
+        "is_cached": false,
+        "accuracy": 54.166666666666664,
+        "macro_f1": 49.28571428571429,
+        "null_weighted_f1": 49.285714285714285,
+        "normalized_accuracy": 38.888888888888886,
+        "null_count": 0,
+        "errors": {}
+      },
+      "global_mmlu_lite_us_foreign_policy": {
+        "inference_time_taken": [
+          0.49971870900003523
+        ],
+        "is_cached": false,
+        "accuracy": 91.66666666666666,
+        "macro_f1": 91.42857142857143,
+        "null_weighted_f1": 91.42857142857143,
+        "normalized_accuracy": 88.88888888888889,
+        "null_count": 0,
+        "errors": {}
+      },
+      "global_mmlu_lite_business_ethics": {
+        "inference_time_taken": [
+          0.7381297639999502
+        ],
+        "is_cached": false,
+        "accuracy": 75.0,
+        "macro_f1": 73.57142857142858,
+        "null_weighted_f1": 73.57142857142858,
+        "normalized_accuracy": 66.66666666666666,
+        "null_count": 0,
+        "errors": {}
+      },
+      "global_mmlu_lite_miscellaneous": {
+        "inference_time_taken": [
+          1.2085707869998714
+        ],
+        "is_cached": false,
+        "accuracy": 80.22727272727272,
+        "macro_f1": 80.3030303030303,
+        "null_weighted_f1": 80.3030303030303,
+        "normalized_accuracy": 73.63636363636363,
+        "null_count": 0,
+        "errors": {}
+      },
+      "global_mmlu_lite_logical_fallacies": {
+        "inference_time_taken": [
+          0.49539100800006963
+        ],
+        "is_cached": false,
+        "accuracy": 100.0,
+        "macro_f1": 100.0,
+        "null_weighted_f1": 100.0,
+        "normalized_accuracy": 100.0,
+        "null_count": 0,
+        "errors": {}
+      },
+      "global_mmlu_lite_nutrition": {
+        "inference_time_taken": [
+          0.5014026799999556
+        ],
+        "is_cached": false,
+        "accuracy": 87.5,
+        "macro_f1": 86.66666666666666,
+        "null_weighted_f1": 86.66666666666667,
+        "normalized_accuracy": 83.33333333333334,
+        "null_count": 0,
+        "errors": {}
+      },
+      "global_mmlu_lite_astronomy": {
+        "inference_time_taken": [
+          0.2858000589999392
+        ],
+        "is_cached": false,
+        "accuracy": 100.0,
+        "macro_f1": 100.0,
+        "null_weighted_f1": 100.0,
+        "normalized_accuracy": 100.0,
+        "null_count": 0,
+        "errors": {}
+      },
+      "global_mmlu_lite_high_school_computer_science": {
+        "inference_time_taken": [
+          0.38046468499987895
+        ],
+        "is_cached": false,
+        "accuracy": 100.0,
+        "macro_f1": 100.0,
+        "null_weighted_f1": 100.0,
+        "normalized_accuracy": 100.0,
+        "null_count": 0,
+        "errors": {}
+      },
+      "global_mmlu_lite_security_studies": {
+        "inference_time_taken": [
+          0.953408834000129
+        ],
+        "is_cached": false,
+        "accuracy": 87.5,
+        "macro_f1": 88.09523809523809,
+        "null_weighted_f1": 88.09523809523809,
+        "normalized_accuracy": 83.33333333333334,
+        "null_count": 0,
+        "errors": {}
+      },
+      "global_mmlu_lite_international_law": {
+        "inference_time_taken": [
+          0.6179333669999778
+        ],
+        "is_cached": false,
+        "accuracy": 91.66666666666666,
+        "macro_f1": 90.0,
+        "null_weighted_f1": 89.99999999999999,
+        "normalized_accuracy": 88.88888888888889,
+        "null_count": 0,
+        "errors": {}
+      },
+      "global_mmlu_lite_sociology": {
+        "inference_time_taken": [
+          0.5555542549998336
+        ],
+        "is_cached": false,
+        "accuracy": 75.0,
+        "macro_f1": 66.66666666666666,
+        "null_weighted_f1": 66.66666666666666,
+        "normalized_accuracy": 66.66666666666666,
+        "null_count": 0,
+        "errors": {}
+      },
+      "global_mmlu_lite_college_biology": {
+        "inference_time_taken": [
+          0.28882255000007717
+        ],
+        "is_cached": false,
+        "accuracy": 100.0,
+        "macro_f1": 100.0,
+        "null_weighted_f1": 100.0,
+        "normalized_accuracy": 100.0,
+        "null_count": 0,
+        "errors": {}
+      },
+      "global_mmlu_lite_high_school_us_history": {
+        "inference_time_taken": [
+          1.0679292429999805
+        ],
+        "is_cached": false,
+        "accuracy": 91.66666666666666,
+        "macro_f1": 90.0,
+        "null_weighted_f1": 89.99999999999999,
+        "normalized_accuracy": 88.88888888888889,
+        "null_count": 0,
+        "errors": {}
+      },
+      "global_mmlu_lite_college_mathematics": {
+        "inference_time_taken": [
+          0.362432778000084
+        ],
+        "is_cached": false,
+        "accuracy": 50.0,
+        "macro_f1": 33.33333333333333,
+        "null_weighted_f1": 50.0,
+        "normalized_accuracy": 33.33333333333333,
+        "null_count": 0,
+        "errors": {}
+      },
+      "global_mmlu_lite_high_school_mathematics": {
+        "inference_time_taken": [
+          0.32458170499990047
+        ],
+        "is_cached": false,
+        "accuracy": 100.0,
+        "macro_f1": 100.0,
+        "null_weighted_f1": 100.0,
+        "normalized_accuracy": 100.0,
+        "null_count": 0,
+        "errors": {}
+      },
+      "global_mmlu_lite": 78.77348484848484,
+      "total": 78.77348484848484
+    },
+    "total": 9.846685606060605
+  },
+  "vi": {
+    "multi-turn": {
+      "mt-bench": {
+        "inference_time_taken": [],
+        "is_cached": false,
+        "weighted_win_rate": 0,
+        "error": "Failed to run evaluation for task"
+      },
+      "total": 0.0
+    },
+    "nlu": {
+      "sentiment": {
+        "inference_time_taken": [],
+        "is_cached": false,
+        "normalized_accuracy": 0,
+        "error": "Failed to run evaluation for task"
+      },
+      "qa": {
+        "inference_time_taken": [],
+        "is_cached": false,
+        "normalized_f1": 0,
+        "error": "Failed to run evaluation for task"
+      },
+      "total": 0.0
+    },
+    "safety": {
+      "toxicity": {
+        "inference_time_taken": [],
+        "is_cached": false,
+        "normalized_accuracy": 0,
+        "error": "Failed to run evaluation for task"
+      },
+      "total": 0.0
+    },
+    "nlg": {
+      "translation-en-xx": {
+        "inference_time_taken": [],
+        "is_cached": false,
+        "normalized_metricx_wmt24_scores": 0,
+        "error": "Failed to run evaluation for task"
+      },
+      "translation-xx-en": {
+        "inference_time_taken": [],
+        "is_cached": false,
+        "normalized_metricx_wmt24_scores": 0,
+        "error": "Failed to run evaluation for task"
+      },
+      "abssum": {
+        "inference_time_taken": [],
+        "is_cached": false,
+        "normalized_rougel_f1": 0,
+        "error": "Failed to run evaluation for task"
+      },
+      "translations": 0.0,
+      "total": 0.0
+    },
+    "nlr": {
+      "causal": {
+        "inference_time_taken": [],
+        "is_cached": false,
+        "normalized_accuracy": 0,
+        "error": "Failed to run evaluation for task"
+      },
+      "nli": {
+        "inference_time_taken": [],
+        "is_cached": false,
+        "normalized_accuracy": 0,
+        "error": "Failed to run evaluation for task"
+      },
+      "total": 0.0
+    },
+    "instruction-following": {
+      "if-eval": {
+        "inference_time_taken": [],
+        "is_cached": false,
+        "overall_lang_normalized_acc": 0,
+        "error": "Failed to run evaluation for task"
+      },
+      "total": 0.0
+    },
+    "knowledge": {
+      "global_mmlu_lite_high_school_geography": {
+        "inference_time_taken": [
+          0.6346076329998596
+        ],
+        "is_cached": false,
+        "accuracy": 74.99999999999999,
+        "macro_f1": 75.41666666666667,
+        "null_weighted_f1": 75.41666666666667,
+        "normalized_accuracy": 66.66666666666666,
+        "null_count": 0,
+        "errors": {}
+      },
+      "global_mmlu_lite_virology": {
+        "inference_time_taken": [
+          0.5081799330000649
+        ],
+        "is_cached": false,
+        "accuracy": 37.5,
+        "macro_f1": 36.66666666666667,
+        "null_weighted_f1": 36.66666666666667,
+        "normalized_accuracy": 16.666666666666664,
+        "null_count": 0,
+        "errors": {}
+      },
+      "global_mmlu_lite_elementary_mathematics": {
+        "inference_time_taken": [
+          0.5130952570000318
+        ],
+        "is_cached": false,
+        "accuracy": 100.0,
+        "macro_f1": 100.0,
+        "null_weighted_f1": 100.0,
+        "normalized_accuracy": 100.0,
+        "null_count": 0,
+        "errors": {}
+      },
+      "global_mmlu_lite_high_school_chemistry": {
+        "inference_time_taken": [
+          0.37382413700015604
+        ],
+        "is_cached": false,
+        "accuracy": 50.0,
+        "macro_f1": 33.33333333333333,
+        "null_weighted_f1": 66.66666666666666,
+        "normalized_accuracy": 33.33333333333333,
+        "null_count": 0,
+        "errors": {}
+      },
+      "global_mmlu_lite_high_school_world_history": {
+        "inference_time_taken": [
+          1.2777198660000977
+        ],
+        "is_cached": false,
+        "accuracy": 75.0,
+        "macro_f1": 69.16666666666667,
+        "null_weighted_f1": 69.16666666666667,
+        "normalized_accuracy": 66.66666666666666,
+        "null_count": 0,
+        "errors": {}
+      },
+      "global_mmlu_lite_professional_psychology": {
+        "inference_time_taken": [
+          0.8004798639999535
+        ],
+        "is_cached": false,
+        "accuracy": 83.33333333333333,
+        "macro_f1": 83.75,
+        "null_weighted_f1": 83.74999999999999,
+        "normalized_accuracy": 77.77777777777777,
+        "null_count": 0,
+        "errors": {}
+      },
+      "global_mmlu_lite_moral_disputes": {
+        "inference_time_taken": [
+          0.5883070299998963
+        ],
+        "is_cached": false,
+        "accuracy": 58.33333333333333,
+        "macro_f1": 60.95238095238095,
+        "null_weighted_f1": 60.95238095238095,
+        "normalized_accuracy": 44.444444444444436,
+        "null_count": 0,
+        "errors": {}
+      },
+      "global_mmlu_lite_professional_accounting": {
+        "inference_time_taken": [
+          0.963634847999856
+        ],
+        "is_cached": false,
+        "accuracy": 68.75,
+        "macro_f1": 69.04761904761905,
+        "null_weighted_f1": 69.04761904761904,
+        "normalized_accuracy": 58.333333333333336,
+        "null_count": 0,
+        "errors": {}
+      },
+      "global_mmlu_lite_high_school_european_history": {
+        "inference_time_taken": [
+          1.462974099999883
+        ],
+        "is_cached": false,
+        "accuracy": 100.0,
+        "macro_f1": 100.0,
+        "null_weighted_f1": 100.0,
+        "normalized_accuracy": 100.0,
+        "null_count": 0,
+        "errors": {}
+      },
+      "global_mmlu_lite_high_school_physics": {
+        "inference_time_taken": [
+          0.7814355210000485
+        ],
+        "is_cached": false,
+        "accuracy": 75.0,
+        "macro_f1": 75.41666666666667,
+        "null_weighted_f1": 75.41666666666667,
+        "normalized_accuracy": 66.66666666666666,
+        "null_count": 0,
+        "errors": {}
+      },
+      "global_mmlu_lite_philosophy": {
+        "inference_time_taken": [
+          0.6628283019999799
+        ],
+        "is_cached": false,
+        "accuracy": 83.33333333333333,
+        "macro_f1": 83.09523809523809,
+        "null_weighted_f1": 83.0952380952381,
+        "normalized_accuracy": 77.77777777777777,
+        "null_count": 0,
+        "errors": {}
+      },
+      "global_mmlu_lite_prehistory": {
+        "inference_time_taken": [
+          0.618339793000132
+        ],
+        "is_cached": false,
+        "accuracy": 83.33333333333333,
+        "macro_f1": 81.66666666666667,
+        "null_weighted_f1": 81.66666666666667,
+        "normalized_accuracy": 77.77777777777777,
+        "null_count": 0,
+        "errors": {}
+      },
+      "global_mmlu_lite_public_relations": {
+        "inference_time_taken": [
+          0.609228142999882
+        ],
+        "is_cached": false,
+        "accuracy": 81.25,
+        "macro_f1": 71.66666666666667,
+        "null_weighted_f1": 71.66666666666666,
+        "normalized_accuracy": 75.0,
+        "null_count": 0,
+        "errors": {}
+      },
+      "global_mmlu_lite_college_medicine": {
+        "inference_time_taken": [
+          0.3685773669999435
+        ],
+        "is_cached": false,
+        "accuracy": 100.0,
+        "macro_f1": 100.0,
+        "null_weighted_f1": 100.0,
+        "normalized_accuracy": 100.0,
+        "null_count": 0,
+        "errors": {}
+      },
+      "global_mmlu_lite_management": {
+        "inference_time_taken": [
+          0.6124879829999372
+        ],
+        "is_cached": false,
+        "accuracy": 100.0,
+        "macro_f1": 100.0,
+        "null_weighted_f1": 100.0,
+        "normalized_accuracy": 100.0,
+        "null_count": 0,
+        "errors": {}
+      },
+      "global_mmlu_lite_jurisprudence": {
+        "inference_time_taken": [
+          0.5978953669998646
+        ],
+        "is_cached": false,
+        "accuracy": 91.66666666666666,
+        "macro_f1": 90.0,
+        "null_weighted_f1": 90.0,
+        "normalized_accuracy": 88.88888888888889,
+        "null_count": 0,
+        "errors": {}
+      },
+      "global_mmlu_lite_human_sexuality": {
+        "inference_time_taken": [
+          0.6009659659998761
+        ],
+        "is_cached": false,
+        "accuracy": 87.5,
+        "macro_f1": 88.09523809523809,
+        "null_weighted_f1": 88.09523809523809,
+        "normalized_accuracy": 83.33333333333334,
+        "null_count": 0,
+        "errors": {}
+      },
+      "global_mmlu_lite_high_school_statistics": {
+        "inference_time_taken": [
+          0.621677697999985
+        ],
+        "is_cached": false,
+        "accuracy": 75.0,
+        "macro_f1": 74.99999999999999,
+        "null_weighted_f1": 74.99999999999999,
+        "normalized_accuracy": 66.66666666666666,
+        "null_count": 0,
+        "errors": {}
+      },
+      "global_mmlu_lite_electrical_engineering": {
+        "inference_time_taken": [
+          0.3954002150001088
+        ],
+        "is_cached": false,
+        "accuracy": 75.0,
+        "macro_f1": 66.66666666666666,
+        "null_weighted_f1": 66.66666666666666,
+        "normalized_accuracy": 66.66666666666666,
+        "null_count": 0,
+        "errors": {}
+      },
+      "global_mmlu_lite_professional_medicine": {
+        "inference_time_taken": [
+          0.4044554470001458
+        ],
+        "is_cached": false,
+        "accuracy": 100.0,
+        "macro_f1": 100.0,
+        "null_weighted_f1": 100.0,
+        "normalized_accuracy": 100.0,
+        "null_count": 0,
+        "errors": {}
+      },
+      "global_mmlu_lite_high_school_macroeconomics": {
+        "inference_time_taken": [
+          0.5987370190000547
+        ],
+        "is_cached": false,
+        "accuracy": 75.0,
+        "macro_f1": 66.42857142857143,
+        "null_weighted_f1": 66.42857142857143,
+        "normalized_accuracy": 66.66666666666666,
+        "null_count": 0,
+        "errors": {}
+      },
+      "global_mmlu_lite_high_school_government_and_politics": {
+        "inference_time_taken": [
+          0.42375686400009727
+        ],
+        "is_cached": false,
+        "accuracy": 75.0,
+        "macro_f1": 66.66666666666666,
+        "null_weighted_f1": 66.66666666666666,
+        "normalized_accuracy": 66.66666666666666,
+        "null_count": 0,
+        "errors": {}
+      },
+      "global_mmlu_lite_human_aging": {
+        "inference_time_taken": [
+          0.727050816999963
+        ],
+        "is_cached": false,
+        "accuracy": 75.0,
+        "macro_f1": 76.60714285714286,
+        "null_weighted_f1": 76.60714285714286,
+        "normalized_accuracy": 66.66666666666666,
+        "null_count": 0,
+        "errors": {}
+      },
+      "global_mmlu_lite_college_chemistry": {
+        "inference_time_taken": [
+          0.3611898930000734
+        ],
+        "is_cached": false,
+        "accuracy": 100.0,
+        "macro_f1": 100.0,
+        "null_weighted_f1": 100.0,
+        "normalized_accuracy": 100.0,
+        "null_count": 0,
+        "errors": {}
+      },
+      "global_mmlu_lite_high_school_microeconomics": {
+        "inference_time_taken": [
+          0.3282772659999864
+        ],
+        "is_cached": false,
+        "accuracy": 50.0,
+        "macro_f1": 33.33333333333333,
+        "null_weighted_f1": 33.33333333333333,
+        "normalized_accuracy": 33.33333333333333,
+        "null_count": 0,
+        "errors": {}
+      },
+      "global_mmlu_lite_global_facts": {
+        "inference_time_taken": [
+          0.699120177000168
+        ],
+        "is_cached": false,
+        "accuracy": 64.58333333333333,
+        "macro_f1": 66.96969696969697,
+        "null_weighted_f1": 66.96969696969695,
+        "normalized_accuracy": 52.77777777777777,
+        "null_count": 0,
+        "errors": {}
+      },
+      "global_mmlu_lite_marketing": {
+        "inference_time_taken": [
+          0.5976779459999761
+        ],
+        "is_cached": false,
+        "accuracy": 79.16666666666666,
+        "macro_f1": 78.33333333333333,
+        "null_weighted_f1": 78.33333333333331,
+        "normalized_accuracy": 72.22222222222221,
+        "null_count": 0,
+        "errors": {}
+      },
+      "global_mmlu_lite_high_school_psychology": {
+        "inference_time_taken": [
+          0.6276396139999179
+        ],
+        "is_cached": false,
+        "accuracy": 79.16666666666666,
+        "macro_f1": 78.0952380952381,
+        "null_weighted_f1": 78.09523809523809,
+        "normalized_accuracy": 72.22222222222221,
+        "null_count": 0,
+        "errors": {}
+      },
+      "global_mmlu_lite_professional_law": {
+        "inference_time_taken": [
+          1.4990505069999926
+        ],
+        "is_cached": false,
+        "accuracy": 58.33333333333333,
+        "macro_f1": 53.333333333333336,
+        "null_weighted_f1": 53.333333333333336,
+        "normalized_accuracy": 44.444444444444436,
+        "null_count": 0,
+        "errors": {}
+      },
+      "global_mmlu_lite_us_foreign_policy": {
+        "inference_time_taken": [
+          0.5885363830000188
+        ],
+        "is_cached": false,
+        "accuracy": 91.66666666666666,
+        "macro_f1": 90.0,
+        "null_weighted_f1": 89.99999999999999,
+        "normalized_accuracy": 88.88888888888889,
+        "null_count": 0,
+        "errors": {}
+      },
+      "global_mmlu_lite_business_ethics": {
+        "inference_time_taken": [
+          0.9030271950000497
+        ],
+        "is_cached": false,
+        "accuracy": 93.75,
+        "macro_f1": 93.65079365079364,
+        "null_weighted_f1": 93.65079365079364,
+        "normalized_accuracy": 91.66666666666666,
+        "null_count": 0,
+        "errors": {}
+      },
+      "global_mmlu_lite_miscellaneous": {
+        "inference_time_taken": [
+          1.4080820720000702
+        ],
+        "is_cached": false,
+        "accuracy": 85.68181818181819,
+        "macro_f1": 85.74630746827543,
+        "null_weighted_f1": 85.74630746827543,
+        "normalized_accuracy": 80.90909090909092,
+        "null_count": 0,
+        "errors": {}
+      },
+      "global_mmlu_lite_logical_fallacies": {
+        "inference_time_taken": [
+          0.6107881860000361
+        ],
+        "is_cached": false,
+        "accuracy": 62.5,
+        "macro_f1": 56.42857142857143,
+        "null_weighted_f1": 56.42857142857143,
+        "normalized_accuracy": 50.0,
+        "null_count": 0,
+        "errors": {}
+      },
+      "global_mmlu_lite_nutrition": {
+        "inference_time_taken": [
+          0.5730223399998522
+        ],
+        "is_cached": false,
+        "accuracy": 87.5,
+        "macro_f1": 86.66666666666666,
+        "null_weighted_f1": 86.66666666666667,
+        "normalized_accuracy": 83.33333333333334,
+        "null_count": 0,
+        "errors": {}
+      },
+      "global_mmlu_lite_astronomy": {
+        "inference_time_taken": [
+          0.32478284000012536
+        ],
+        "is_cached": false,
+        "accuracy": 100.0,
+        "macro_f1": 100.0,
+        "null_weighted_f1": 100.0,
+        "normalized_accuracy": 100.0,
+        "null_count": 0,
+        "errors": {}
+      },
+      "global_mmlu_lite_high_school_computer_science": {
+        "inference_time_taken": [
+          0.4222430140000597
+        ],
+        "is_cached": false,
+        "accuracy": 100.0,
+        "macro_f1": 100.0,
+        "null_weighted_f1": 100.0,
+        "normalized_accuracy": 100.0,
+        "null_count": 0,
+        "errors": {}
+      },
+      "global_mmlu_lite_security_studies": {
+        "inference_time_taken": [
+          1.1585299580001447
+        ],
+        "is_cached": false,
+        "accuracy": 100.0,
+        "macro_f1": 100.0,
+        "null_weighted_f1": 100.0,
+        "normalized_accuracy": 100.0,
+        "null_count": 0,
+        "errors": {}
+      },
+      "global_mmlu_lite_international_law": {
+        "inference_time_taken": [
+          0.7318431040000632
+        ],
+        "is_cached": false,
+        "accuracy": 91.66666666666666,
+        "macro_f1": 90.0,
+        "null_weighted_f1": 89.99999999999999,
+        "normalized_accuracy": 88.88888888888889,
+        "null_count": 0,
+        "errors": {}
+      },
+      "global_mmlu_lite_sociology": {
+        "inference_time_taken": [
+          0.6636087879999195
+        ],
+        "is_cached": false,
+        "accuracy": 91.66666666666666,
+        "macro_f1": 91.42857142857143,
+        "null_weighted_f1": 91.42857142857143,
+        "normalized_accuracy": 88.88888888888889,
+        "null_count": 0,
+        "errors": {}
+      },
+      "global_mmlu_lite_college_biology": {
+        "inference_time_taken": [
+          0.3644451890002074
+        ],
+        "is_cached": false,
+        "accuracy": 100.0,
+        "macro_f1": 100.0,
+        "null_weighted_f1": 100.0,
+        "normalized_accuracy": 100.0,
+        "null_count": 0,
+        "errors": {}
+      },
+      "global_mmlu_lite_high_school_us_history": {
+        "inference_time_taken": [
+          1.3990041839999776
+        ],
+        "is_cached": false,
+        "accuracy": 100.0,
+        "macro_f1": 100.0,
+        "null_weighted_f1": 100.0,
+        "normalized_accuracy": 100.0,
+        "null_count": 0,
+        "errors": {}
+      },
+      "global_mmlu_lite_college_mathematics": {
+        "inference_time_taken": [
+          0.406031627999937
+        ],
+        "is_cached": false,
+        "accuracy": 100.0,
+        "macro_f1": 100.0,
+        "null_weighted_f1": 100.0,
+        "normalized_accuracy": 100.0,
+        "null_count": 0,
+        "errors": {}
+      },
+      "global_mmlu_lite_high_school_mathematics": {
+        "inference_time_taken": [
+          0.36990642199998547
+        ],
+        "is_cached": false,
+        "accuracy": 100.0,
+        "macro_f1": 100.0,
+        "null_weighted_f1": 100.0,
+        "normalized_accuracy": 100.0,
+        "null_count": 0,
+        "errors": {}
+      },
+      "global_mmlu_lite": 75.82878787878788,
+      "total": 75.82878787878788
+    },
+    "total": 10.832683982683983
+  },
+  "th": {
+    "multi-turn": {
+      "mt-bench": {
+        "inference_time_taken": [],
+        "is_cached": false,
+        "weighted_win_rate": 0,
+        "error": "Failed to run evaluation for task"
+      },
+      "total": 0.0
+    },
+    "nlu": {
+      "sentiment": {
+        "inference_time_taken": [],
+        "is_cached": false,
+        "normalized_accuracy": 0,
+        "error": "Failed to run evaluation for task"
+      },
+      "qa": {
+        "inference_time_taken": [],
+        "is_cached": false,
+        "normalized_f1": 0,
+        "error": "Failed to run evaluation for task"
+      },
+      "total": 0.0
+    },
+    "safety": {
+      "toxicity": {
+        "inference_time_taken": [],
+        "is_cached": false,
+        "normalized_accuracy": 0,
+        "error": "Failed to run evaluation for task"
+      },
+      "total": 0.0
+    },
+    "nlg": {
+      "translation-en-xx": {
+        "inference_time_taken": [],
+        "is_cached": false,
+        "normalized_metricx_wmt24_scores": 0,
+        "error": "Failed to run evaluation for task"
+      },
+      "translation-xx-en": {
+        "inference_time_taken": [],
+        "is_cached": false,
+        "normalized_metricx_wmt24_scores": 0,
+        "error": "Failed to run evaluation for task"
+      },
+      "abssum": {
+        "inference_time_taken": [],
+        "is_cached": false,
+        "normalized_rougel_f1": 0,
+        "error": "Failed to run evaluation for task"
+      },
+      "translations": 0.0,
+      "total": 0.0
+    },
+    "nlr": {
+      "causal": {
+        "inference_time_taken": [],
+        "is_cached": false,
+        "normalized_accuracy": 0,
+        "error": "Failed to run evaluation for task"
+      },
+      "nli": {
+        "inference_time_taken": [],
+        "is_cached": false,
+        "normalized_accuracy": 0,
+        "error": "Failed to run evaluation for task"
+      },
+      "total": 0.0
+    },
+    "instruction-following": {
+      "if-eval": {
+        "inference_time_taken": [],
+        "is_cached": false,
+        "overall_lang_normalized_acc": 0,
+        "error": "Failed to run evaluation for task"
+      },
+      "total": 0.0
+    },
+    "knowledge": {
+      "thai_exam_a_level": {
+        "inference_time_taken": [
+          6.567284316000041
+        ],
+        "is_cached": false,
+        "accuracy": 65.51173388015494,
+        "macro_f1": 59.832283362639025,
+        "null_weighted_f1": 57.09978538229803,
+        "normalized_accuracy": 56.88966735019366,
+        "null_count": 26,
+        "errors": {}
+      },
+      "thai_exam_ic": {
+        "inference_time_taken": [
+          5.115452290000121
+        ],
+        "is_cached": false,
+        "accuracy": 74.58574320416427,
+        "macro_f1": 61.464646464646464,
+        "null_weighted_f1": 71.97833599149388,
+        "normalized_accuracy": 66.11432427221902,
+        "null_count": 6,
+        "errors": {}
+      },
+      "thai_exam_onet": {
+        "inference_time_taken": [
+          8.883340881999857
+        ],
+        "is_cached": false,
+        "accuracy": 68.06699346405229,
+        "macro_f1": 61.5883574845839,
+        "null_weighted_f1": 61.5883574845839,
+        "normalized_accuracy": 60.08374183006535,
+        "null_count": 27,
+        "errors": {}
+      },
+      "thai_exam_tgat": {
+        "inference_time_taken": [
+          4.07479030200011
+        ],
+        "is_cached": false,
+        "accuracy": 74.30481283422459,
+        "macro_f1": 65.83333333333333,
+        "null_weighted_f1": 69.27692307692308,
+        "normalized_accuracy": 67.88101604278074,
+        "null_count": 8,
+        "errors": {}
+      },
+      "thai_exam_tpat1": {
+        "inference_time_taken": [
+          6.99344221299998
+        ],
+        "is_cached": false,
+        "accuracy": 47.16410256410256,
+        "macro_f1": 44.61015175300889,
+        "null_weighted_f1": 38.3031992637904,
+        "normalized_accuracy": 33.9551282051282,
+        "null_count": 33,
+        "errors": {}
+      },
+      "thai_exam": 56.98477554007739,
+      "total": 56.98477554007739
+    },
+    "total": 8.140682220011056
+  },
+  "ta": {
+    "multi-turn": {
+      "mt-bench": {
+        "inference_time_taken": [],
+        "is_cached": false,
+        "weighted_win_rate": 0,
+        "error": "Failed to run evaluation for task"
+      },
+      "total": 0.0
+    },
+    "nlu": {
+      "sentiment": {
+        "inference_time_taken": [],
+        "is_cached": false,
+        "normalized_accuracy": 0,
+        "error": "Failed to run evaluation for task"
+      },
+      "qa": {
+        "inference_time_taken": [],
+        "is_cached": false,
+        "normalized_f1": 0,
+        "error": "Failed to run evaluation for task"
+      },
+      "total": 0.0
+    },
+    "nlg": {
+      "translation-en-xx": {
+        "inference_time_taken": [],
+        "is_cached": false,
+        "normalized_metricx_wmt24_scores": 0,
+        "error": "Failed to run evaluation for task"
+      },
+      "translation-xx-en": {
+        "inference_time_taken": [],
+        "is_cached": false,
+        "normalized_metricx_wmt24_scores": 0,
+        "error": "Failed to run evaluation for task"
+      },
+      "abssum": {
+        "inference_time_taken": [],
+        "is_cached": false,
+        "normalized_rougel_f1": 0,
+        "error": "Failed to run evaluation for task"
+      },
+      "translations": 0.0,
+      "total": 0.0
+    },
+    "nlr": {
+      "causal": {
+        "inference_time_taken": [],
+        "is_cached": false,
+        "normalized_accuracy": 0,
+        "error": "Failed to run evaluation for task"
+      },
+      "nli": {
+        "inference_time_taken": [],
+        "is_cached": false,
+        "normalized_accuracy": 0,
+        "error": "Failed to run evaluation for task"
+      },
+      "total": 0.0
+    },
+    "instruction-following": {
+      "if-eval": {
+        "inference_time_taken": [],
+        "is_cached": false,
+        "overall_lang_normalized_acc": 0,
+        "error": "Failed to run evaluation for task"
+      },
+      "total": 0.0
+    },
+    "linguistic-diagnostics": {
+      "mp-r": {
+        "inference_time_taken": [],
+        "is_cached": false,
+        "normalized_accuracy": 0,
+        "error": "Failed to run evaluation for task"
+      },
+      "pragmatic-single": {
+        "inference_time_taken": [],
+        "is_cached": false,
+        "normalized_accuracy": 0,
+        "error": "Failed to run evaluation for task"
+      },
+      "pragmatic-pair": {
+        "inference_time_taken": [],
+        "is_cached": false,
+        "normalized_accuracy": 0,
+        "error": "Failed to run evaluation for task"
+      },
+      "pragmatics": {
+        "subcategories": {
+          "scalar_implicatures": {
+            "accuracy": 0.0,
+            "correct_count": 0,
+            "total_count": 0
+          },
+          "presuppositions": {
+            "accuracy": 0.0,
+            "correct_count": 0,
+            "total_count": 0
+          }
+        },
+        "accuracy": 0.0,
+        "normalized_accuracy": 0
+      },
+      "lindsea": {
+        "normalized_score": 0.0,
+        "subcategories": {}
+      },
+      "total": 0.0
+    },
+    "total": 0.0
+  },
+  "tl": {
+    "multi-turn": {
+      "mt-bench": {
+        "inference_time_taken": [],
+        "is_cached": false,
+        "weighted_win_rate": 0,
+        "error": "Failed to run evaluation for task"
+      },
+      "total": 0.0
+    },
+    "nlu": {
+      "sentiment": {
+        "inference_time_taken": [],
+        "is_cached": false,
+        "normalized_accuracy": 0,
+        "error": "Failed to run evaluation for task"
+      },
+      "belebele-qa-mc": {
+        "inference_time_taken": [],
+        "is_cached": false,
+        "normalized_accuracy": 0,
+        "error": "Failed to run evaluation for task"
+      },
+      "total": 0.0
+    },
+    "safety": {
+      "toxicity": {
+        "inference_time_taken": [],
+        "is_cached": false,
+        "normalized_accuracy": 0,
+        "error": "Failed to run evaluation for task"
+      },
+      "total": 0.0
+    },
+    "nlg": {
+      "translation-en-xx": {
+        "inference_time_taken": [],
+        "is_cached": false,
+        "normalized_metricx_wmt24_scores": 0,
+        "error": "Failed to run evaluation for task"
+      },
+      "translation-xx-en": {
+        "inference_time_taken": [],
+        "is_cached": false,
+        "normalized_metricx_wmt24_scores": 0,
+        "error": "Failed to run evaluation for task"
+      },
+      "abssum": {
+        "inference_time_taken": [],
+        "is_cached": false,
+        "normalized_rougel_f1": 0,
+        "error": "Failed to run evaluation for task"
+      },
+      "translations": 0.0,
+      "total": 0.0
+    },
+    "nlr": {
+      "causal": {
+        "inference_time_taken": [],
+        "is_cached": false,
+        "normalized_accuracy": 0,
+        "error": "Failed to run evaluation for task"
+      },
+      "nli": {
+        "inference_time_taken": [],
+        "is_cached": false,
+        "normalized_accuracy": 0,
+        "error": "Failed to run evaluation for task"
+      },
+      "total": 0.0
+    },
+    "instruction-following": {
+      "if-eval": {
+        "inference_time_taken": [],
+        "is_cached": false,
+        "overall_lang_normalized_acc": 0,
+        "error": "Failed to run evaluation for task"
+      },
+      "total": 0.0
+    },
+    "cultural": {
+      "kalahi-mc": {
+        "inference_time_taken": [],
+        "is_cached": false,
+        "normalized_accuracy": 0,
+        "error": "Failed to run evaluation for task"
+      },
+      "total": 0.0
+    },
+    "knowledge": {
+      "global_mmlu_lite_high_school_geography": {
+        "inference_time_taken": [
+          0.5808109979998335
+        ],
+        "is_cached": false,
+        "accuracy": 74.99999999999999,
+        "macro_f1": 75.41666666666667,
+        "null_weighted_f1": 75.41666666666667,
+        "normalized_accuracy": 66.66666666666666,
+        "null_count": 0,
+        "errors": {}
+      },
+      "global_mmlu_lite_virology": {
+        "inference_time_taken": [
+          0.4509039819999998
+        ],
+        "is_cached": false,
+        "accuracy": 37.5,
+        "macro_f1": 32.5,
+        "null_weighted_f1": 32.5,
+        "normalized_accuracy": 16.666666666666664,
+        "null_count": 0,
+        "errors": {}
+      },
+      "global_mmlu_lite_elementary_mathematics": {
+        "inference_time_taken": [
+          0.45516998199991576
+        ],
+        "is_cached": false,
+        "accuracy": 100.0,
+        "macro_f1": 100.0,
+        "null_weighted_f1": 100.0,
+        "normalized_accuracy": 100.0,
+        "null_count": 0,
+        "errors": {}
+      },
+      "global_mmlu_lite_high_school_chemistry": {
+        "inference_time_taken": [
+          0.391226123000024
+        ],
+        "is_cached": false,
+        "accuracy": 100.0,
+        "macro_f1": 100.0,
+        "null_weighted_f1": 100.0,
+        "normalized_accuracy": 100.0,
+        "null_count": 0,
+        "errors": {}
+      },
+      "global_mmlu_lite_high_school_world_history": {
+        "inference_time_taken": [
+          1.4697542479998447
+        ],
+        "is_cached": false,
+        "accuracy": 75.0,
+        "macro_f1": 69.16666666666667,
+        "null_weighted_f1": 69.16666666666667,
+        "normalized_accuracy": 66.66666666666666,
+        "null_count": 0,
+        "errors": {}
+      },
+      "global_mmlu_lite_professional_psychology": {
+        "inference_time_taken": [
+          0.7763963370000511
+        ],
+        "is_cached": false,
+        "accuracy": 83.33333333333333,
+        "macro_f1": 80.35714285714286,
+        "null_weighted_f1": 80.35714285714286,
+        "normalized_accuracy": 77.77777777777777,
+        "null_count": 0,
+        "errors": {}
+      },
+      "global_mmlu_lite_moral_disputes": {
+        "inference_time_taken": [
+          0.5567079729999023
+        ],
+        "is_cached": false,
+        "accuracy": 83.33333333333333,
+        "macro_f1": 81.66666666666667,
+        "null_weighted_f1": 81.66666666666667,
+        "normalized_accuracy": 77.77777777777777,
+        "null_count": 0,
+        "errors": {}
+      },
+      "global_mmlu_lite_professional_accounting": {
+        "inference_time_taken": [
+          1.4929097619999538
+        ],
+        "is_cached": false,
+        "accuracy": 68.75,
+        "macro_f1": 56.904761904761905,
+        "null_weighted_f1": 66.68526785714286,
+        "normalized_accuracy": 58.333333333333336,
+        "null_count": 1,
+        "errors": {}
+      },
+      "global_mmlu_lite_high_school_european_history": {
+        "inference_time_taken": [
+          1.4614959380000982
+        ],
+        "is_cached": false,
+        "accuracy": 100.0,
+        "macro_f1": 100.0,
+        "null_weighted_f1": 100.0,
+        "normalized_accuracy": 100.0,
+        "null_count": 0,
+        "errors": {}
+      },
+      "global_mmlu_lite_high_school_physics": {
+        "inference_time_taken": [
+          1.2419466349999766
+        ],
+        "is_cached": false,
+        "accuracy": 66.66666666666666,
+        "macro_f1": 56.47619047619048,
+        "null_weighted_f1": 58.82936507936508,
+        "normalized_accuracy": 55.55555555555555,
+        "null_count": 2,
+        "errors": {}
+      },
+      "global_mmlu_lite_philosophy": {
+        "inference_time_taken": [
+          0.6483628129999488
+        ],
+        "is_cached": false,
+        "accuracy": 100.0,
+        "macro_f1": 100.0,
+        "null_weighted_f1": 100.0,
+        "normalized_accuracy": 100.0,
+        "null_count": 0,
+        "errors": {}
+      },
+      "global_mmlu_lite_prehistory": {
+        "inference_time_taken": [
+          0.6424318479998874
+        ],
+        "is_cached": false,
+        "accuracy": 100.0,
+        "macro_f1": 100.0,
+        "null_weighted_f1": 100.0,
+        "normalized_accuracy": 100.0,
+        "null_count": 0,
+        "errors": {}
+      },
+      "global_mmlu_lite_public_relations": {
+        "inference_time_taken": [
+          0.5709339940001428
+        ],
+        "is_cached": false,
+        "accuracy": 93.75,
+        "macro_f1": 91.42857142857143,
+        "null_weighted_f1": 91.42857142857143,
+        "normalized_accuracy": 91.66666666666666,
+        "null_count": 0,
+        "errors": {}
+      },
+      "global_mmlu_lite_college_medicine": {
+        "inference_time_taken": [
+          0.3262789180000709
+        ],
+        "is_cached": false,
+        "accuracy": 100.0,
+        "macro_f1": 100.0,
+        "null_weighted_f1": 100.0,
+        "normalized_accuracy": 100.0,
+        "null_count": 0,
+        "errors": {}
+      },
+      "global_mmlu_lite_management": {
+        "inference_time_taken": [
+          0.6123803899999984
+        ],
+        "is_cached": false,
+        "accuracy": 93.75,
+        "macro_f1": 93.65079365079364,
+        "null_weighted_f1": 93.65079365079364,
+        "normalized_accuracy": 91.66666666666666,
+        "null_count": 0,
+        "errors": {}
+      },
+      "global_mmlu_lite_jurisprudence": {
+        "inference_time_taken": [
+          0.5976359060000505
+        ],
+        "is_cached": false,
+        "accuracy": 91.66666666666666,
+        "macro_f1": 89.99999999999999,
+        "null_weighted_f1": 90.0,
+        "normalized_accuracy": 88.88888888888889,
+        "null_count": 0,
+        "errors": {}
+      },
+      "global_mmlu_lite_human_sexuality": {
+        "inference_time_taken": [
+          0.5827176160000818
+        ],
+        "is_cached": false,
+        "accuracy": 100.0,
+        "macro_f1": 100.0,
+        "null_weighted_f1": 100.0,
+        "normalized_accuracy": 100.0,
+        "null_count": 0,
+        "errors": {}
+      },
+      "global_mmlu_lite_high_school_statistics": {
+        "inference_time_taken": [
+          1.1503470449999895
+        ],
+        "is_cached": false,
+        "accuracy": 75.0,
+        "macro_f1": 66.66666666666666,
+        "null_weighted_f1": 62.5,
+        "normalized_accuracy": 66.66666666666666,
+        "null_count": 2,
+        "errors": {}
+      },
+      "global_mmlu_lite_electrical_engineering": {
+        "inference_time_taken": [
+          0.3566400600000179
+        ],
+        "is_cached": false,
+        "accuracy": 100.0,
+        "macro_f1": 100.0,
+        "null_weighted_f1": 100.0,
+        "normalized_accuracy": 100.0,
+        "null_count": 0,
+        "errors": {}
+      },
+      "global_mmlu_lite_professional_medicine": {
+        "inference_time_taken": [
+          0.38614196800017453
+        ],
+        "is_cached": false,
+        "accuracy": 100.0,
+        "macro_f1": 100.0,
+        "null_weighted_f1": 100.0,
+        "normalized_accuracy": 100.0,
+        "null_count": 0,
+        "errors": {}
+      },
+      "global_mmlu_lite_high_school_macroeconomics": {
+        "inference_time_taken": [
+          0.5877718670001286
+        ],
+        "is_cached": false,
+        "accuracy": 62.5,
+        "macro_f1": 55.35714285714286,
+        "null_weighted_f1": 55.35714285714286,
+        "normalized_accuracy": 50.0,
+        "null_count": 0,
+        "errors": {}
+      },
+      "global_mmlu_lite_high_school_government_and_politics": {
+        "inference_time_taken": [
+          0.43341383000006317
+        ],
+        "is_cached": false,
+        "accuracy": 100.0,
+        "macro_f1": 100.0,
+        "null_weighted_f1": 100.0,
+        "normalized_accuracy": 100.0,
+        "null_count": 0,
+        "errors": {}
+      },
+      "global_mmlu_lite_human_aging": {
+        "inference_time_taken": [
+          0.7003377720000117
+        ],
+        "is_cached": false,
+        "accuracy": 81.25,
+        "macro_f1": 80.31746031746032,
+        "null_weighted_f1": 80.31746031746032,
+        "normalized_accuracy": 75.0,
+        "null_count": 0,
+        "errors": {}
+      },
+      "global_mmlu_lite_college_chemistry": {
+        "inference_time_taken": [
+          0.7773908520000532
+        ],
+        "is_cached": false,
+        "accuracy": 50.0,
+        "macro_f1": 33.33333333333333,
+        "null_weighted_f1": 25.0,
+        "normalized_accuracy": 33.33333333333333,
+        "null_count": 1,
+        "errors": {}
+      },
+      "global_mmlu_lite_high_school_microeconomics": {
+        "inference_time_taken": [
+          0.3224022199999581
+        ],
+        "is_cached": false,
+        "accuracy": 50.0,
+        "macro_f1": 33.33333333333333,
+        "null_weighted_f1": 50.0,
+        "normalized_accuracy": 33.33333333333333,
+        "null_count": 0,
+        "errors": {}
+      },
+      "global_mmlu_lite_global_facts": {
+        "inference_time_taken": [
+          0.7484866859999784
+        ],
+        "is_cached": false,
+        "accuracy": 64.58333333333333,
+        "macro_f1": 63.33333333333333,
+        "null_weighted_f1": 63.33333333333333,
+        "normalized_accuracy": 52.77777777777777,
+        "null_count": 0,
+        "errors": {}
+      },
+      "global_mmlu_lite_marketing": {
+        "inference_time_taken": [
+          0.5849514829999407
+        ],
+        "is_cached": false,
+        "accuracy": 79.16666666666666,
+        "macro_f1": 78.33333333333333,
+        "null_weighted_f1": 78.33333333333331,
+        "normalized_accuracy": 72.22222222222221,
+        "null_count": 0,
+        "errors": {}
+      },
+      "global_mmlu_lite_high_school_psychology": {
+        "inference_time_taken": [
+          0.6489932679999129
+        ],
+        "is_cached": false,
+        "accuracy": 79.16666666666666,
+        "macro_f1": 78.0952380952381,
+        "null_weighted_f1": 78.09523809523809,
+        "normalized_accuracy": 72.22222222222221,
+        "null_count": 0,
+        "errors": {}
+      },
+      "global_mmlu_lite_professional_law": {
+        "inference_time_taken": [
+          1.6789696959999674
+        ],
+        "is_cached": false,
+        "accuracy": 41.666666666666664,
+        "macro_f1": 37.5,
+        "null_weighted_f1": 37.5,
+        "normalized_accuracy": 22.222222222222218,
+        "null_count": 0,
+        "errors": {}
+      },
+      "global_mmlu_lite_us_foreign_policy": {
+        "inference_time_taken": [
+          0.6171645010001612
+        ],
+        "is_cached": false,
+        "accuracy": 70.83333333333333,
+        "macro_f1": 68.0952380952381,
+        "null_weighted_f1": 68.0952380952381,
+        "normalized_accuracy": 61.11111111111111,
+        "null_count": 0,
+        "errors": {}
+      },
+      "global_mmlu_lite_business_ethics": {
+        "inference_time_taken": [
+          0.9514625540000452
+        ],
+        "is_cached": false,
+        "accuracy": 81.25,
+        "macro_f1": 80.2579365079365,
+        "null_weighted_f1": 80.2579365079365,
+        "normalized_accuracy": 75.0,
+        "null_count": 0,
+        "errors": {}
+      },
+      "global_mmlu_lite_miscellaneous": {
+        "inference_time_taken": [
+          1.4297213500001362
+        ],
+        "is_cached": false,
+        "accuracy": 87.72727272727272,
+        "macro_f1": 87.66074611662846,
+        "null_weighted_f1": 87.66074611662847,
+        "normalized_accuracy": 83.63636363636363,
+        "null_count": 0,
+        "errors": {}
+      },
+      "global_mmlu_lite_logical_fallacies": {
+        "inference_time_taken": [
+          0.5608384999998179
+        ],
+        "is_cached": false,
+        "accuracy": 100.0,
+        "macro_f1": 100.0,
+        "null_weighted_f1": 100.0,
+        "normalized_accuracy": 100.0,
+        "null_count": 0,
+        "errors": {}
+      },
+      "global_mmlu_lite_nutrition": {
+        "inference_time_taken": [
+          0.5407170470000437
+        ],
+        "is_cached": false,
+        "accuracy": 87.5,
+        "macro_f1": 86.66666666666666,
+        "null_weighted_f1": 86.66666666666667,
+        "normalized_accuracy": 83.33333333333334,
+        "null_count": 0,
+        "errors": {}
+      },
+      "global_mmlu_lite_astronomy": {
+        "inference_time_taken": [
+          0.2837188700000297
+        ],
+        "is_cached": false,
+        "accuracy": 50.0,
+        "macro_f1": 33.33333333333333,
+        "null_weighted_f1": 50.0,
+        "normalized_accuracy": 33.33333333333333,
+        "null_count": 0,
+        "errors": {}
+      },
+      "global_mmlu_lite_high_school_computer_science": {
+        "inference_time_taken": [
+          0.39190330599990375
+        ],
+        "is_cached": false,
+        "accuracy": 100.0,
+        "macro_f1": 100.0,
+        "null_weighted_f1": 100.0,
+        "normalized_accuracy": 100.0,
+        "null_count": 0,
+        "errors": {}
+      },
+      "global_mmlu_lite_security_studies": {
+        "inference_time_taken": [
+          1.3314790849999554
+        ],
+        "is_cached": false,
+        "accuracy": 91.66666666666666,
+        "macro_f1": 90.0,
+        "null_weighted_f1": 89.99999999999999,
+        "normalized_accuracy": 88.88888888888889,
+        "null_count": 0,
+        "errors": {}
+      },
+      "global_mmlu_lite_international_law": {
+        "inference_time_taken": [
+          0.7511969259999205
+        ],
+        "is_cached": false,
+        "accuracy": 79.16666666666666,
+        "macro_f1": 78.33333333333333,
+        "null_weighted_f1": 78.33333333333331,
+        "normalized_accuracy": 72.22222222222221,
+        "null_count": 0,
+        "errors": {}
+      },
+      "global_mmlu_lite_sociology": {
+        "inference_time_taken": [
+          0.6363038649999453
+        ],
+        "is_cached": false,
+        "accuracy": 91.66666666666666,
+        "macro_f1": 91.42857142857143,
+        "null_weighted_f1": 91.42857142857143,
+        "normalized_accuracy": 88.88888888888889,
+        "null_count": 0,
+        "errors": {}
+      },
+      "global_mmlu_lite_college_biology": {
+        "inference_time_taken": [
+          0.3558257940001113
+        ],
+        "is_cached": false,
+        "accuracy": 100.0,
+        "macro_f1": 100.0,
+        "null_weighted_f1": 100.0,
+        "normalized_accuracy": 100.0,
+        "null_count": 0,
+        "errors": {}
+      },
+      "global_mmlu_lite_high_school_us_history": {
+        "inference_time_taken": [
+          1.404743561000032
+        ],
+        "is_cached": false,
+        "accuracy": 91.66666666666666,
+        "macro_f1": 90.0,
+        "null_weighted_f1": 89.99999999999999,
+        "normalized_accuracy": 88.88888888888889,
+        "null_count": 0,
+        "errors": {}
+      },
+      "global_mmlu_lite_college_mathematics": {
+        "inference_time_taken": [
+          0.7420392480000828
+        ],
+        "is_cached": false,
+        "accuracy": 50.0,
+        "macro_f1": 33.33333333333333,
+        "null_weighted_f1": 25.0,
+        "normalized_accuracy": 33.33333333333333,
+        "null_count": 1,
+        "errors": {}
+      },
+      "global_mmlu_lite_high_school_mathematics": {
+        "inference_time_taken": [
+          0.7790451509999912
+        ],
+        "is_cached": false,
+        "accuracy": 0.0,
+        "macro_f1": 0.0,
+        "null_weighted_f1": 0.0,
+        "normalized_accuracy": 0,
+        "null_count": 2,
+        "errors": {}
+      },
+      "global_mmlu_lite": 76.11515151515151,
+      "total": 76.11515151515151
+    },
+    "total": 9.514393939393939
+  },
+  "ms": {
+    "multi-turn": {
+      "mt-bench": {
+        "inference_time_taken": [],
+        "is_cached": false,
+        "weighted_win_rate": 0,
+        "error": "Failed to run evaluation for task"
+      },
+      "total": 0.0
+    },
+    "nlu": {
+      "sentiment": {
+        "inference_time_taken": [],
+        "is_cached": false,
+        "normalized_accuracy": 0,
+        "error": "Failed to run evaluation for task"
+      },
+      "belebele-qa-mc": {
+        "inference_time_taken": [],
+        "is_cached": false,
+        "normalized_accuracy": 0,
+        "error": "Failed to run evaluation for task"
+      },
+      "total": 0.0
+    },
+    "safety": {
+      "toxicity": {
+        "inference_time_taken": [],
+        "is_cached": false,
+        "normalized_accuracy": 0,
+        "error": "Failed to run evaluation for task"
+      },
+      "total": 0.0
+    },
+    "nlg": {
+      "translation-en-xx": {
+        "inference_time_taken": [],
+        "is_cached": false,
+        "normalized_metricx_wmt24_scores": 0,
+        "error": "Failed to run evaluation for task"
+      },
+      "translation-xx-en": {
+        "inference_time_taken": [],
+        "is_cached": false,
+        "normalized_metricx_wmt24_scores": 0,
+        "error": "Failed to run evaluation for task"
+      },
+      "translations": 0.0,
+      "total": 0.0
+    },
+    "instruction-following": {
+      "if-eval": {
+        "inference_time_taken": [],
+        "is_cached": false,
+        "overall_lang_normalized_acc": 0,
+        "error": "Failed to run evaluation for task"
+      },
+      "total": 0.0
+    },
+    "knowledge": {
+      "global_mmlu_lite_high_school_geography": {
+        "inference_time_taken": [
+          0.5317099500000495
+        ],
+        "is_cached": false,
+        "accuracy": 74.99999999999999,
+        "macro_f1": 75.41666666666667,
+        "null_weighted_f1": 75.41666666666667,
+        "normalized_accuracy": 66.66666666666666,
+        "null_count": 0,
+        "errors": {}
+      },
+      "global_mmlu_lite_virology": {
+        "inference_time_taken": [
+          0.41534548699996776
+        ],
+        "is_cached": false,
+        "accuracy": 37.5,
+        "macro_f1": 36.66666666666667,
+        "null_weighted_f1": 36.66666666666667,
+        "normalized_accuracy": 16.666666666666664,
+        "null_count": 0,
+        "errors": {}
+      },
+      "global_mmlu_lite_elementary_mathematics": {
+        "inference_time_taken": [
+          0.42167799599997124
+        ],
+        "is_cached": false,
+        "accuracy": 100.0,
+        "macro_f1": 100.0,
+        "null_weighted_f1": 100.0,
+        "normalized_accuracy": 100.0,
+        "null_count": 0,
+        "errors": {}
+      },
+      "global_mmlu_lite_high_school_chemistry": {
+        "inference_time_taken": [
+          0.3346360180000829
+        ],
+        "is_cached": false,
+        "accuracy": 50.0,
+        "macro_f1": 33.33333333333333,
+        "null_weighted_f1": 66.66666666666666,
+        "normalized_accuracy": 33.33333333333333,
+        "null_count": 0,
+        "errors": {}
+      },
+      "global_mmlu_lite_high_school_world_history": {
+        "inference_time_taken": [
+          1.1694969449999917
+        ],
+        "is_cached": false,
+        "accuracy": 75.0,
+        "macro_f1": 69.16666666666667,
+        "null_weighted_f1": 69.16666666666667,
+        "normalized_accuracy": 66.66666666666666,
+        "null_count": 0,
+        "errors": {}
+      },
+      "global_mmlu_lite_professional_psychology": {
+        "inference_time_taken": [
+          0.6370314910000161
+        ],
+        "is_cached": false,
+        "accuracy": 83.33333333333333,
+        "macro_f1": 83.09523809523809,
+        "null_weighted_f1": 83.09523809523809,
+        "normalized_accuracy": 77.77777777777777,
+        "null_count": 0,
+        "errors": {}
+      },
+      "global_mmlu_lite_moral_disputes": {
+        "inference_time_taken": [
+          0.5112479209999492
+        ],
+        "is_cached": false,
+        "accuracy": 70.83333333333333,
+        "macro_f1": 71.78571428571429,
+        "null_weighted_f1": 71.78571428571429,
+        "normalized_accuracy": 61.11111111111111,
+        "null_count": 0,
+        "errors": {}
+      },
+      "global_mmlu_lite_professional_accounting": {
+        "inference_time_taken": [
+          0.8587139119999847
+        ],
+        "is_cached": false,
+        "accuracy": 75.0,
+        "macro_f1": 74.0079365079365,
+        "null_weighted_f1": 74.0079365079365,
+        "normalized_accuracy": 66.66666666666666,
+        "null_count": 0,
+        "errors": {}
+      },
+      "global_mmlu_lite_high_school_european_history": {
+        "inference_time_taken": [
+          1.1555750719999196
+        ],
+        "is_cached": false,
+        "accuracy": 100.0,
+        "macro_f1": 100.0,
+        "null_weighted_f1": 100.0,
+        "normalized_accuracy": 100.0,
+        "null_count": 0,
+        "errors": {}
+      },
+      "global_mmlu_lite_high_school_physics": {
+        "inference_time_taken": [
+          0.6781174660000033
+        ],
+        "is_cached": false,
+        "accuracy": 66.66666666666666,
+        "macro_f1": 65.53571428571429,
+        "null_weighted_f1": 65.53571428571429,
+        "normalized_accuracy": 55.55555555555555,
+        "null_count": 0,
+        "errors": {}
+      },
+      "global_mmlu_lite_philosophy": {
+        "inference_time_taken": [
+          0.5629451889999473
+        ],
+        "is_cached": false,
+        "accuracy": 100.0,
+        "macro_f1": 100.0,
+        "null_weighted_f1": 100.0,
+        "normalized_accuracy": 100.0,
+        "null_count": 0,
+        "errors": {}
+      },
+      "global_mmlu_lite_prehistory": {
+        "inference_time_taken": [
+          0.5567028599998594
+        ],
+        "is_cached": false,
+        "accuracy": 100.0,
+        "macro_f1": 100.0,
+        "null_weighted_f1": 100.0,
+        "normalized_accuracy": 100.0,
+        "null_count": 0,
+        "errors": {}
+      },
+      "global_mmlu_lite_public_relations": {
+        "inference_time_taken": [
+          0.5074383430001035
+        ],
+        "is_cached": false,
+        "accuracy": 93.75,
+        "macro_f1": 91.42857142857143,
+        "null_weighted_f1": 91.42857142857143,
+        "normalized_accuracy": 91.66666666666666,
+        "null_count": 0,
+        "errors": {}
+      },
+      "global_mmlu_lite_college_medicine": {
+        "inference_time_taken": [
+          0.2868909540000004
+        ],
+        "is_cached": false,
+        "accuracy": 50.0,
+        "macro_f1": 33.33333333333333,
+        "null_weighted_f1": 66.66666666666666,
+        "normalized_accuracy": 33.33333333333333,
+        "null_count": 0,
+        "errors": {}
+      },
+      "global_mmlu_lite_management": {
+        "inference_time_taken": [
+          0.5537349639998865
+        ],
+        "is_cached": false,
+        "accuracy": 93.75,
+        "macro_f1": 93.65079365079364,
+        "null_weighted_f1": 93.65079365079364,
+        "normalized_accuracy": 91.66666666666666,
+        "null_count": 0,
+        "errors": {}
+      },
+      "global_mmlu_lite_jurisprudence": {
+        "inference_time_taken": [
+          0.5025558679999449
+        ],
+        "is_cached": false,
+        "accuracy": 100.0,
+        "macro_f1": 100.0,
+        "null_weighted_f1": 100.0,
+        "normalized_accuracy": 100.0,
+        "null_count": 0,
+        "errors": {}
+      },
+      "global_mmlu_lite_human_sexuality": {
+        "inference_time_taken": [
+          0.5181426139999985
+        ],
+        "is_cached": false,
+        "accuracy": 100.0,
+        "macro_f1": 100.0,
+        "null_weighted_f1": 100.0,
+        "normalized_accuracy": 100.0,
+        "null_count": 0,
+        "errors": {}
+      },
+      "global_mmlu_lite_high_school_statistics": {
+        "inference_time_taken": [
+          0.5769391950000227
+        ],
+        "is_cached": false,
+        "accuracy": 87.5,
+        "macro_f1": 86.66666666666666,
+        "null_weighted_f1": 86.66666666666667,
+        "normalized_accuracy": 83.33333333333334,
+        "null_count": 0,
+        "errors": {}
+      },
+      "global_mmlu_lite_electrical_engineering": {
+        "inference_time_taken": [
+          0.32377738300010606
+        ],
+        "is_cached": false,
+        "accuracy": 100.0,
+        "macro_f1": 100.0,
+        "null_weighted_f1": 100.0,
+        "normalized_accuracy": 100.0,
+        "null_count": 0,
+        "errors": {}
+      },
+      "global_mmlu_lite_professional_medicine": {
+        "inference_time_taken": [
+          0.3551130519999788
+        ],
+        "is_cached": false,
+        "accuracy": 100.0,
+        "macro_f1": 100.0,
+        "null_weighted_f1": 100.0,
+        "normalized_accuracy": 100.0,
+        "null_count": 0,
+        "errors": {}
+      },
+      "global_mmlu_lite_high_school_macroeconomics": {
+        "inference_time_taken": [
+          0.5236895560001358
+        ],
+        "is_cached": false,
+        "accuracy": 100.0,
+        "macro_f1": 100.0,
+        "null_weighted_f1": 100.0,
+        "normalized_accuracy": 100.0,
+        "null_count": 0,
+        "errors": {}
+      },
+      "global_mmlu_lite_high_school_government_and_politics": {
+        "inference_time_taken": [
+          0.3473475570001483
+        ],
+        "is_cached": false,
+        "accuracy": 75.0,
+        "macro_f1": 66.66666666666666,
+        "null_weighted_f1": 66.66666666666666,
+        "normalized_accuracy": 66.66666666666666,
+        "null_count": 0,
+        "errors": {}
+      },
+      "global_mmlu_lite_human_aging": {
+        "inference_time_taken": [
+          0.6136698570001045
+        ],
+        "is_cached": false,
+        "accuracy": 75.0,
+        "macro_f1": 74.30555555555554,
+        "null_weighted_f1": 74.30555555555554,
+        "normalized_accuracy": 66.66666666666666,
+        "null_count": 0,
+        "errors": {}
+      },
+      "global_mmlu_lite_college_chemistry": {
+        "inference_time_taken": [
+          0.32381674900011603
+        ],
+        "is_cached": false,
+        "accuracy": 50.0,
+        "macro_f1": 33.33333333333333,
+        "null_weighted_f1": 33.33333333333333,
+        "normalized_accuracy": 33.33333333333333,
+        "null_count": 0,
+        "errors": {}
+      },
+      "global_mmlu_lite_high_school_microeconomics": {
+        "inference_time_taken": [
+          0.2848317319999296
+        ],
+        "is_cached": false,
+        "accuracy": 50.0,
+        "macro_f1": 33.33333333333333,
+        "null_weighted_f1": 50.0,
+        "normalized_accuracy": 33.33333333333333,
+        "null_count": 0,
+        "errors": {}
+      },
+      "global_mmlu_lite_global_facts": {
+        "inference_time_taken": [
+          0.6453617070001201
+        ],
+        "is_cached": false,
+        "accuracy": 64.58333333333333,
+        "macro_f1": 62.5,
+        "null_weighted_f1": 62.5,
+        "normalized_accuracy": 52.77777777777777,
+        "null_count": 0,
+        "errors": {}
+      },
+      "global_mmlu_lite_marketing": {
+        "inference_time_taken": [
+          0.4977085769999121
+        ],
+        "is_cached": false,
+        "accuracy": 87.5,
+        "macro_f1": 88.09523809523809,
+        "null_weighted_f1": 88.09523809523809,
+        "normalized_accuracy": 83.33333333333334,
+        "null_count": 0,
+        "errors": {}
+      },
+      "global_mmlu_lite_high_school_psychology": {
+        "inference_time_taken": [
+          0.5723827100000562
+        ],
+        "is_cached": false,
+        "accuracy": 79.16666666666666,
+        "macro_f1": 78.0952380952381,
+        "null_weighted_f1": 78.09523809523809,
+        "normalized_accuracy": 72.22222222222221,
+        "null_count": 0,
+        "errors": {}
+      },
+      "global_mmlu_lite_professional_law": {
+        "inference_time_taken": [
+          1.314587735000032
+        ],
+        "is_cached": false,
+        "accuracy": 49.99999999999999,
+        "macro_f1": 50.83333333333333,
+        "null_weighted_f1": 50.83333333333333,
+        "normalized_accuracy": 33.33333333333333,
+        "null_count": 0,
+        "errors": {}
+      },
+      "global_mmlu_lite_us_foreign_policy": {
+        "inference_time_taken": [
+          0.48362669700009064
+        ],
+        "is_cached": false,
+        "accuracy": 79.16666666666666,
+        "macro_f1": 78.33333333333333,
+        "null_weighted_f1": 78.33333333333331,
+        "normalized_accuracy": 72.22222222222221,
+        "null_count": 0,
+        "errors": {}
+      },
+      "global_mmlu_lite_business_ethics": {
+        "inference_time_taken": [
+          0.7379698879999523
+        ],
+        "is_cached": false,
+        "accuracy": 87.5,
+        "macro_f1": 87.40079365079364,
+        "null_weighted_f1": 87.40079365079364,
+        "normalized_accuracy": 83.33333333333334,
+        "null_count": 0,
+        "errors": {}
+      },
+      "global_mmlu_lite_miscellaneous": {
+        "inference_time_taken": [
+          1.240567001999807
+        ],
+        "is_cached": false,
+        "accuracy": 82.72727272727273,
+        "macro_f1": 82.86749482401656,
+        "null_weighted_f1": 82.86749482401656,
+        "normalized_accuracy": 76.96969696969697,
+        "null_count": 0,
+        "errors": {}
+      },
+      "global_mmlu_lite_logical_fallacies": {
+        "inference_time_taken": [
+          0.4802908369997567
+        ],
+        "is_cached": false,
+        "accuracy": 91.66666666666666,
+        "macro_f1": 89.99999999999999,
+        "null_weighted_f1": 89.99999999999999,
+        "normalized_accuracy": 88.88888888888889,
+        "null_count": 0,
+        "errors": {}
+      },
+      "global_mmlu_lite_nutrition": {
+        "inference_time_taken": [
+          0.5007587170002807
+        ],
+        "is_cached": false,
+        "accuracy": 87.5,
+        "macro_f1": 86.66666666666666,
+        "null_weighted_f1": 86.66666666666667,
+        "normalized_accuracy": 83.33333333333334,
+        "null_count": 0,
+        "errors": {}
+      },
+      "global_mmlu_lite_astronomy": {
+        "inference_time_taken": [
+          0.284182600999884
+        ],
+        "is_cached": false,
+        "accuracy": 100.0,
+        "macro_f1": 100.0,
+        "null_weighted_f1": 100.0,
+        "normalized_accuracy": 100.0,
+        "null_count": 0,
+        "errors": {}
+      },
+      "global_mmlu_lite_high_school_computer_science": {
+        "inference_time_taken": [
+          0.3955201590001707
+        ],
+        "is_cached": false,
+        "accuracy": 100.0,
+        "macro_f1": 100.0,
+        "null_weighted_f1": 100.0,
+        "normalized_accuracy": 100.0,
+        "null_count": 0,
+        "errors": {}
+      },
+      "global_mmlu_lite_security_studies": {
+        "inference_time_taken": [
+          0.9698983589996715
+        ],
+        "is_cached": false,
+        "accuracy": 83.33333333333334,
+        "macro_f1": 78.92857142857143,
+        "null_weighted_f1": 78.92857142857143,
+        "normalized_accuracy": 77.77777777777779,
+        "null_count": 0,
+        "errors": {}
+      },
+      "global_mmlu_lite_international_law": {
+        "inference_time_taken": [
+          0.6639239010000892
+        ],
+        "is_cached": false,
+        "accuracy": 91.66666666666666,
+        "macro_f1": 90.0,
+        "null_weighted_f1": 89.99999999999999,
+        "normalized_accuracy": 88.88888888888889,
+        "null_count": 0,
+        "errors": {}
+      },
+      "global_mmlu_lite_sociology": {
+        "inference_time_taken": [
+          0.567123260000244
+        ],
+        "is_cached": false,
+        "accuracy": 75.0,
+        "macro_f1": 73.75,
+        "null_weighted_f1": 73.75,
+        "normalized_accuracy": 66.66666666666666,
+        "null_count": 0,
+        "errors": {}
+      },
+      "global_mmlu_lite_college_biology": {
+        "inference_time_taken": [
+          0.28882642799999303
+        ],
+        "is_cached": false,
+        "accuracy": 100.0,
+        "macro_f1": 100.0,
+        "null_weighted_f1": 100.0,
+        "normalized_accuracy": 100.0,
+        "null_count": 0,
+        "errors": {}
+      },
+      "global_mmlu_lite_high_school_us_history": {
+        "inference_time_taken": [
+          1.1229050709998774
+        ],
+        "is_cached": false,
+        "accuracy": 100.0,
+        "macro_f1": 100.0,
+        "null_weighted_f1": 100.0,
+        "normalized_accuracy": 100.0,
+        "null_count": 0,
+        "errors": {}
+      },
+      "global_mmlu_lite_college_mathematics": {
+        "inference_time_taken": [
+          0.3566331619999801
+        ],
+        "is_cached": false,
+        "accuracy": 50.0,
+        "macro_f1": 33.33333333333333,
+        "null_weighted_f1": 33.33333333333333,
+        "normalized_accuracy": 33.33333333333333,
+        "null_count": 0,
+        "errors": {}
+      },
+      "global_mmlu_lite_high_school_mathematics": {
+        "inference_time_taken": [
+          0.32148490200006563
+        ],
+        "is_cached": false,
+        "accuracy": 100.0,
+        "macro_f1": 100.0,
+        "null_weighted_f1": 100.0,
+        "normalized_accuracy": 100.0,
+        "null_count": 0,
+        "errors": {}
+      },
+      "global_mmlu_lite": 77.33181818181818,
+      "total": 77.33181818181818
+    },
+    "total": 12.888636363636364
+  },
+  "my": {
+    "multi-turn": {
+      "mt-bench": {
+        "inference_time_taken": [],
+        "is_cached": false,
+        "weighted_win_rate": 0,
+        "error": "Failed to run evaluation for task"
+      },
+      "total": 0.0
+    },
+    "nlu": {
+      "sentiment": {
+        "inference_time_taken": [],
+        "is_cached": false,
+        "normalized_accuracy": 0,
+        "error": "Failed to run evaluation for task"
+      },
+      "belebele-qa-mc": {
+        "inference_time_taken": [],
+        "is_cached": false,
+        "normalized_accuracy": 0,
+        "error": "Failed to run evaluation for task"
+      },
+      "total": 0.0
+    },
+    "safety": {
+      "toxicity": {
+        "inference_time_taken": [],
+        "is_cached": false,
+        "normalized_accuracy": 0,
+        "error": "Failed to run evaluation for task"
+      },
+      "total": 0.0
+    },
+    "nlg": {
+      "translation-en-xx": {
+        "inference_time_taken": [],
+        "is_cached": false,
+        "normalized_metricx_wmt24_scores": 0,
+        "error": "Failed to run evaluation for task"
+      },
+      "translation-xx-en": {
+        "inference_time_taken": [],
+        "is_cached": false,
+        "normalized_metricx_wmt24_scores": 0,
+        "error": "Failed to run evaluation for task"
+      },
+      "abssum": {
+        "inference_time_taken": [],
+        "is_cached": false,
+        "normalized_rougel_f1": 0,
+        "error": "Failed to run evaluation for task"
+      },
+      "translations": 0.0,
+      "total": 0.0
+    },
+    "nlr": {
+      "causal": {
+        "inference_time_taken": [],
+        "is_cached": false,
+        "normalized_accuracy": 0,
+        "error": "Failed to run evaluation for task"
+      },
+      "nli": {
+        "inference_time_taken": [],
+        "is_cached": false,
+        "normalized_accuracy": 0,
+        "error": "Failed to run evaluation for task"
+      },
+      "total": 0.0
+    },
+    "instruction-following": {
+      "if-eval": {
+        "inference_time_taken": [],
+        "is_cached": false,
+        "overall_lang_normalized_acc": 0,
+        "error": "Failed to run evaluation for task"
+      },
+      "total": 0.0
+    },
+    "knowledge": {
+      "global_mmlu_lite_high_school_geography": {
+        "inference_time_taken": [
+          0.7513332939997781
+        ],
+        "is_cached": false,
+        "accuracy": 66.66666666666666,
+        "macro_f1": 66.66666666666666,
+        "null_weighted_f1": 66.66666666666666,
+        "normalized_accuracy": 55.55555555555555,
+        "null_count": 0,
+        "errors": {}
+      },
+      "global_mmlu_lite_virology": {
+        "inference_time_taken": [
+          0.5780991739998171
+        ],
+        "is_cached": false,
+        "accuracy": 50.0,
+        "macro_f1": 49.16666666666667,
+        "null_weighted_f1": 49.16666666666667,
+        "normalized_accuracy": 33.33333333333333,
+        "null_count": 0,
+        "errors": {}
+      },
+      "global_mmlu_lite_elementary_mathematics": {
+        "inference_time_taken": [
+          0.5479203710001457
+        ],
+        "is_cached": false,
+        "accuracy": 87.5,
+        "macro_f1": 86.66666666666666,
+        "null_weighted_f1": 86.66666666666667,
+        "normalized_accuracy": 83.33333333333334,
+        "null_count": 0,
+        "errors": {}
+      },
+      "global_mmlu_lite_high_school_chemistry": {
+        "inference_time_taken": [
+          0.39876585399997566
+        ],
+        "is_cached": false,
+        "accuracy": 50.0,
+        "macro_f1": 33.33333333333333,
+        "null_weighted_f1": 66.66666666666666,
+        "normalized_accuracy": 33.33333333333333,
+        "null_count": 0,
+        "errors": {}
+      },
+      "global_mmlu_lite_high_school_world_history": {
+        "inference_time_taken": [
+          1.8918373759997849
+        ],
+        "is_cached": false,
+        "accuracy": 75.0,
+        "macro_f1": 69.16666666666667,
+        "null_weighted_f1": 69.16666666666667,
+        "normalized_accuracy": 66.66666666666666,
+        "null_count": 0,
+        "errors": {}
+      },
+      "global_mmlu_lite_professional_psychology": {
+        "inference_time_taken": [
+          1.0581692190003196
+        ],
+        "is_cached": false,
+        "accuracy": 66.66666666666666,
+        "macro_f1": 66.42857142857143,
+        "null_weighted_f1": 66.42857142857143,
+        "normalized_accuracy": 55.55555555555555,
+        "null_count": 0,
+        "errors": {}
+      },
+      "global_mmlu_lite_moral_disputes": {
+        "inference_time_taken": [
+          0.7341983709998203
+        ],
+        "is_cached": false,
+        "accuracy": 70.83333333333333,
+        "macro_f1": 69.16666666666667,
+        "null_weighted_f1": 69.16666666666667,
+        "normalized_accuracy": 61.11111111111111,
+        "null_count": 0,
+        "errors": {}
+      },
+      "global_mmlu_lite_professional_accounting": {
+        "inference_time_taken": [
+          1.3382375459996183
+        ],
+        "is_cached": false,
+        "accuracy": 43.75,
+        "macro_f1": 42.9004329004329,
+        "null_weighted_f1": 42.900432900432904,
+        "normalized_accuracy": 25.0,
+        "null_count": 0,
+        "errors": {}
+      },
+      "global_mmlu_lite_high_school_european_history": {
+        "inference_time_taken": [
+          1.8097044959999948
+        ],
+        "is_cached": false,
+        "accuracy": 100.0,
+        "macro_f1": 100.0,
+        "null_weighted_f1": 100.0,
+        "normalized_accuracy": 100.0,
+        "null_count": 0,
+        "errors": {}
+      },
+      "global_mmlu_lite_high_school_physics": {
+        "inference_time_taken": [
+          1.0127281009999933
+        ],
+        "is_cached": false,
+        "accuracy": 58.33333333333333,
+        "macro_f1": 50.95238095238095,
+        "null_weighted_f1": 50.95238095238095,
+        "normalized_accuracy": 44.444444444444436,
+        "null_count": 0,
+        "errors": {}
+      },
+      "global_mmlu_lite_philosophy": {
+        "inference_time_taken": [
+          0.7782262430000628
+        ],
+        "is_cached": false,
+        "accuracy": 74.99999999999999,
+        "macro_f1": 74.76190476190476,
+        "null_weighted_f1": 74.76190476190476,
+        "normalized_accuracy": 66.66666666666666,
+        "null_count": 0,
+        "errors": {}
+      },
+      "global_mmlu_lite_prehistory": {
+        "inference_time_taken": [
+          0.8135266770000271
+        ],
+        "is_cached": false,
+        "accuracy": 83.33333333333333,
+        "macro_f1": 81.66666666666667,
+        "null_weighted_f1": 81.66666666666667,
+        "normalized_accuracy": 77.77777777777777,
+        "null_count": 0,
+        "errors": {}
+      },
+      "global_mmlu_lite_public_relations": {
+        "inference_time_taken": [
+          0.7078404280000541
+        ],
+        "is_cached": false,
+        "accuracy": 87.5,
+        "macro_f1": 83.33333333333333,
+        "null_weighted_f1": 83.33333333333333,
+        "normalized_accuracy": 83.33333333333334,
+        "null_count": 0,
+        "errors": {}
+      },
+      "global_mmlu_lite_college_medicine": {
+        "inference_time_taken": [
+          0.3274137079997672
+        ],
+        "is_cached": false,
+        "accuracy": 100.0,
+        "macro_f1": 100.0,
+        "null_weighted_f1": 100.0,
+        "normalized_accuracy": 100.0,
+        "null_count": 0,
+        "errors": {}
+      },
+      "global_mmlu_lite_management": {
+        "inference_time_taken": [
+          1.1071381690003363
+        ],
+        "is_cached": false,
+        "accuracy": 81.25,
+        "macro_f1": 66.42857142857143,
+        "null_weighted_f1": 77.84598214285714,
+        "normalized_accuracy": 75.0,
+        "null_count": 1,
+        "errors": {}
+      },
+      "global_mmlu_lite_jurisprudence": {
+        "inference_time_taken": [
+          0.7249917699996331
+        ],
+        "is_cached": false,
+        "accuracy": 91.66666666666666,
+        "macro_f1": 90.0,
+        "null_weighted_f1": 89.99999999999999,
+        "normalized_accuracy": 88.88888888888889,
+        "null_count": 0,
+        "errors": {}
+      },
+      "global_mmlu_lite_human_sexuality": {
+        "inference_time_taken": [
+          0.7772022209996976
+        ],
+        "is_cached": false,
+        "accuracy": 100.0,
+        "macro_f1": 100.0,
+        "null_weighted_f1": 100.0,
+        "normalized_accuracy": 100.0,
+        "null_count": 0,
+        "errors": {}
+      },
+      "global_mmlu_lite_high_school_statistics": {
+        "inference_time_taken": [
+          0.833646107000277
+        ],
+        "is_cached": false,
+        "accuracy": 100.0,
+        "macro_f1": 100.0,
+        "null_weighted_f1": 100.0,
+        "normalized_accuracy": 100.0,
+        "null_count": 0,
+        "errors": {}
+      },
+      "global_mmlu_lite_electrical_engineering": {
+        "inference_time_taken": [
+          0.4415922850002971
+        ],
+        "is_cached": false,
+        "accuracy": 75.0,
+        "macro_f1": 66.66666666666666,
+        "null_weighted_f1": 66.66666666666666,
+        "normalized_accuracy": 66.66666666666666,
+        "null_count": 0,
+        "errors": {}
+      },
+      "global_mmlu_lite_professional_medicine": {
+        "inference_time_taken": [
+          0.4472358150001128
+        ],
+        "is_cached": false,
+        "accuracy": 100.0,
+        "macro_f1": 100.0,
+        "null_weighted_f1": 100.0,
+        "normalized_accuracy": 100.0,
+        "null_count": 0,
+        "errors": {}
+      },
+      "global_mmlu_lite_high_school_macroeconomics": {
+        "inference_time_taken": [
+          0.790360069000144
+        ],
+        "is_cached": false,
+        "accuracy": 79.16666666666666,
+        "macro_f1": 77.5,
+        "null_weighted_f1": 77.49999999999999,
+        "normalized_accuracy": 72.22222222222221,
+        "null_count": 0,
+        "errors": {}
+      },
+      "global_mmlu_lite_high_school_government_and_politics": {
+        "inference_time_taken": [
+          0.5078769749998173
+        ],
+        "is_cached": false,
+        "accuracy": 75.0,
+        "macro_f1": 66.66666666666666,
+        "null_weighted_f1": 66.66666666666666,
+        "normalized_accuracy": 66.66666666666666,
+        "null_count": 0,
+        "errors": {}
+      },
+      "global_mmlu_lite_human_aging": {
+        "inference_time_taken": [
+          0.8622736530001021
+        ],
+        "is_cached": false,
+        "accuracy": 68.75,
+        "macro_f1": 65.41666666666667,
+        "null_weighted_f1": 65.41666666666667,
+        "normalized_accuracy": 58.333333333333336,
+        "null_count": 0,
+        "errors": {}
+      },
+      "global_mmlu_lite_college_chemistry": {
+        "inference_time_taken": [
+          0.36906099099996936
+        ],
+        "is_cached": false,
+        "accuracy": 100.0,
+        "macro_f1": 100.0,
+        "null_weighted_f1": 100.0,
+        "normalized_accuracy": 100.0,
+        "null_count": 0,
+        "errors": {}
+      },
+      "global_mmlu_lite_high_school_microeconomics": {
+        "inference_time_taken": [
+          0.37154871299981096
+        ],
+        "is_cached": false,
+        "accuracy": 50.0,
+        "macro_f1": 33.33333333333333,
+        "null_weighted_f1": 50.0,
+        "normalized_accuracy": 33.33333333333333,
+        "null_count": 0,
+        "errors": {}
+      },
+      "global_mmlu_lite_global_facts": {
+        "inference_time_taken": [
+          0.9128327479998006
+        ],
+        "is_cached": false,
+        "accuracy": 58.33333333333333,
+        "macro_f1": 50.0,
+        "null_weighted_f1": 50.0,
+        "normalized_accuracy": 44.444444444444436,
+        "null_count": 0,
+        "errors": {}
+      },
+      "global_mmlu_lite_marketing": {
+        "inference_time_taken": [
+          0.6923506590001125
+        ],
+        "is_cached": false,
+        "accuracy": 79.16666666666666,
+        "macro_f1": 79.76190476190476,
+        "null_weighted_f1": 79.76190476190476,
+        "normalized_accuracy": 72.22222222222221,
+        "null_count": 0,
+        "errors": {}
+      },
+      "global_mmlu_lite_high_school_psychology": {
+        "inference_time_taken": [
+          0.8438184980000187
+        ],
+        "is_cached": false,
+        "accuracy": 79.16666666666666,
+        "macro_f1": 77.49999999999999,
+        "null_weighted_f1": 77.5,
+        "normalized_accuracy": 72.22222222222221,
+        "null_count": 0,
+        "errors": {}
+      },
+      "global_mmlu_lite_professional_law": {
+        "inference_time_taken": [
+          2.0673928199998954
+        ],
+        "is_cached": false,
+        "accuracy": 45.83333333333333,
+        "macro_f1": 41.666666666666664,
+        "null_weighted_f1": 41.666666666666664,
+        "normalized_accuracy": 27.777777777777768,
+        "null_count": 0,
+        "errors": {}
+      },
+      "global_mmlu_lite_us_foreign_policy": {
+        "inference_time_taken": [
+          0.743055515999913
+        ],
+        "is_cached": false,
+        "accuracy": 83.33333333333334,
+        "macro_f1": 78.92857142857143,
+        "null_weighted_f1": 78.92857142857143,
+        "normalized_accuracy": 77.77777777777779,
+        "null_count": 0,
+        "errors": {}
+      },
+      "global_mmlu_lite_business_ethics": {
+        "inference_time_taken": [
+          1.2873145799999293
+        ],
+        "is_cached": false,
+        "accuracy": 81.25,
+        "macro_f1": 80.15873015873017,
+        "null_weighted_f1": 80.15873015873015,
+        "normalized_accuracy": 75.0,
+        "null_count": 0,
+        "errors": {}
+      },
+      "global_mmlu_lite_miscellaneous": {
+        "inference_time_taken": [
+          1.8897814299998572
+        ],
+        "is_cached": false,
+        "accuracy": 70.9090909090909,
+        "macro_f1": 69.83036890645586,
+        "null_weighted_f1": 69.83036890645586,
+        "normalized_accuracy": 61.21212121212122,
+        "null_count": 0,
+        "errors": {}
+      },
+      "global_mmlu_lite_logical_fallacies": {
+        "inference_time_taken": [
+          0.7204709769998772
+        ],
+        "is_cached": false,
+        "accuracy": 70.83333333333333,
+        "macro_f1": 70.0,
+        "null_weighted_f1": 70.0,
+        "normalized_accuracy": 61.11111111111111,
+        "null_count": 0,
+        "errors": {}
+      },
+      "global_mmlu_lite_nutrition": {
+        "inference_time_taken": [
+          0.6879291029999877
+        ],
+        "is_cached": false,
+        "accuracy": 75.0,
+        "macro_f1": 75.0,
+        "null_weighted_f1": 75.0,
+        "normalized_accuracy": 66.66666666666666,
+        "null_count": 0,
+        "errors": {}
+      },
+      "global_mmlu_lite_astronomy": {
+        "inference_time_taken": [
+          0.2920632310001565
+        ],
+        "is_cached": false,
+        "accuracy": 100.0,
+        "macro_f1": 100.0,
+        "null_weighted_f1": 100.0,
+        "normalized_accuracy": 100.0,
+        "null_count": 0,
+        "errors": {}
+      },
+      "global_mmlu_lite_high_school_computer_science": {
+        "inference_time_taken": [
+          0.4376550480001242
+        ],
+        "is_cached": false,
+        "accuracy": 100.0,
+        "macro_f1": 100.0,
+        "null_weighted_f1": 100.0,
+        "normalized_accuracy": 100.0,
+        "null_count": 0,
+        "errors": {}
+      },
+      "global_mmlu_lite_security_studies": {
+        "inference_time_taken": [
+          1.7804839979999088
+        ],
+        "is_cached": false,
+        "accuracy": 83.33333333333334,
+        "macro_f1": 78.92857142857143,
+        "null_weighted_f1": 78.92857142857143,
+        "normalized_accuracy": 77.77777777777779,
+        "null_count": 0,
+        "errors": {}
+      },
+      "global_mmlu_lite_international_law": {
+        "inference_time_taken": [
+          0.9808630649999941
+        ],
+        "is_cached": false,
+        "accuracy": 83.33333333333333,
+        "macro_f1": 77.49999999999999,
+        "null_weighted_f1": 77.5,
+        "normalized_accuracy": 77.77777777777777,
+        "null_count": 0,
+        "errors": {}
+      },
+      "global_mmlu_lite_sociology": {
+        "inference_time_taken": [
+          0.8226473899999291
+        ],
+        "is_cached": false,
+        "accuracy": 75.0,
+        "macro_f1": 73.21428571428572,
+        "null_weighted_f1": 73.21428571428572,
+        "normalized_accuracy": 66.66666666666666,
+        "null_count": 0,
+        "errors": {}
+      },
+      "global_mmlu_lite_college_biology": {
+        "inference_time_taken": [
+          0.36938596099980714
+        ],
+        "is_cached": false,
+        "accuracy": 100.0,
+        "macro_f1": 100.0,
+        "null_weighted_f1": 100.0,
+        "normalized_accuracy": 100.0,
+        "null_count": 0,
+        "errors": {}
+      },
+      "global_mmlu_lite_high_school_us_history": {
+        "inference_time_taken": [
+          1.9453072999999677
+        ],
+        "is_cached": false,
+        "accuracy": 70.83333333333333,
+        "macro_f1": 70.95238095238095,
+        "null_weighted_f1": 70.95238095238095,
+        "normalized_accuracy": 61.11111111111111,
+        "null_count": 0,
+        "errors": {}
+      },
+      "global_mmlu_lite_college_mathematics": {
+        "inference_time_taken": [
+          0.3719060329999593
+        ],
+        "is_cached": false,
+        "accuracy": 50.0,
+        "macro_f1": 33.33333333333333,
+        "null_weighted_f1": 50.0,
+        "normalized_accuracy": 33.33333333333333,
+        "null_count": 0,
+        "errors": {}
+      },
+      "global_mmlu_lite_high_school_mathematics": {
+        "inference_time_taken": [
+          0.33104112000000896
+        ],
+        "is_cached": false,
+        "accuracy": 100.0,
+        "macro_f1": 100.0,
+        "null_weighted_f1": 100.0,
+        "normalized_accuracy": 100.0,
+        "null_count": 0,
+        "errors": {}
+      },
+      "global_mmlu_lite": 66.42727272727272,
+      "total": 66.42727272727272
+    },
+    "total": 9.48961038961039
+  },
+  "total": 8.673241785913762
+}

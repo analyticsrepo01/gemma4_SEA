@@ -10,17 +10,17 @@ This project benchmarks Gemma 4 variants across **7 Southeast Asian languages** 
 
 ### Gemma 4 Knowledge Pillar — Head-to-Head Comparison
 
-| Language | E4B (8B Dense) | 26B MoE (4B active) | Improvement |
-|----------|:--------------:|:-------------------:|:-----------:|
-| Indonesian (ID) | 59.77 | **72.82** | +13.05 |
-| Vietnamese (VI) | 52.61 | **70.24** | +17.63 |
-| Malay (MS) | 53.52 | **71.36** | +17.84 |
-| Filipino (TL) | 55.29 | **65.80** | +10.51 |
-| Burmese (MY) | 42.56 | **53.50** | +10.94 |
-| Thai (TH) | 43.28 | **49.61** | +6.33 |
-| Tamil (TA) | N/A | N/A | — |
+| Language | E4B (8B Dense) | 26B MoE (4B active) | 31B Dense | Best Improvement |
+|----------|:--------------:|:-------------------:|:---------:|:----------------:|
+| Indonesian (ID) | 59.77 | 72.82 | **78.77** | +19.00 |
+| Vietnamese (VI) | 52.61 | 70.24 | **75.83** | +23.22 |
+| Malay (MS) | 53.52 | 71.36 | **77.33** | +23.81 |
+| Filipino (TL) | 55.29 | 65.80 | **76.12** | +20.83 |
+| Burmese (MY) | 42.56 | 53.50 | **66.43** | +23.87 |
+| Thai (TH) | 43.28 | 49.61 | **56.98** | +13.70 |
+| Tamil (TA) | N/A | N/A | N/A | — |
 
-> **Key Insight:** The 26B MoE model delivers a **+12.7 point average improvement** over the 8B dense model across all languages. The biggest gains are in Malay (+17.8) and Vietnamese (+17.6). Despite only 4B active parameters per token, the MoE architecture significantly outperforms the 8B dense model.
+> **Key Insight:** The **31B dense model leads across all languages**, with the largest gains in Burmese (+23.9 over E4B) and Malay (+23.8). The 26B MoE (only 4B active params) delivers ~90% of 31B's performance — remarkable efficiency. Even the 8B E4B holds its own against much larger models on the leaderboard.
 
 ### Cross-Model Comparison (SEA-HELM Leaderboard)
 
@@ -64,10 +64,11 @@ How Gemma 4 stacks up against **62 models** on the [official SEA-HELM leaderboar
 | Gemma 3 27B | 27B | Dense | 59.74 | 64.12 | 67.70 | 60.92 | 60.06 |
 | **Gemma 4 E4B** | **8B** | **Dense** | **—** | **59.77*** | **55.29*** | **53.52*** | **52.61*** |
 | **Gemma 4 26B MoE** | **26B** | **MoE** | **—** | **72.82*** | **65.80*** | **71.36*** | **70.24*** |
+| **Gemma 4 31B** | **31B** | **Dense** | **—** | **78.77*** | **76.12*** | **77.33*** | **75.83*** |
 
 *\*Knowledge pillar only (not full-suite). Leaderboard scores include all 5 pillars.*
 
-> **Generation leap:** Gemma 4 26B MoE surpasses Gemma 3 27B on knowledge tasks by **+8.7 points on Indonesian** and **+10.2 on Vietnamese**, despite having fewer active parameters per token (4B vs 27B).
+> **Generation leap:** Gemma 4 31B dense tops the knowledge charts at **78.77 on Indonesian** — a +14.65 point jump over Gemma 3 27B. The 26B MoE achieves ~93% of 31B's performance with only 4B active parameters per token.
 
 #### 8B-Class Model Comparison
 
@@ -102,15 +103,15 @@ How Gemma 4 stacks up against **62 models** on the [official SEA-HELM leaderboar
 
 ### Languages Evaluated
 
-| Code | Language | Script | E4B Knowledge | 26B MoE Knowledge |
-|------|----------|--------|:-------------:|:-----------------:|
-| ID | Indonesian | Latin | 59.77 | **72.82** |
-| VI | Vietnamese | Latin | 52.61 | **70.24** |
-| MS | Malay | Latin | 53.52 | **71.36** |
-| TL | Filipino | Latin | 55.29 | **65.80** |
-| TH | Thai | Thai | 43.28 | **49.61** |
-| MY | Burmese | Myanmar | 42.56 | **53.50** |
-| TA | Tamil | Tamil | N/A | N/A |
+| Code | Language | Script | E4B Knowledge | 26B MoE Knowledge | 31B Dense Knowledge |
+|------|----------|--------|:-------------:|:-----------------:|:-------------------:|
+| ID | Indonesian | Latin | 59.77 | 72.82 | **78.77** |
+| VI | Vietnamese | Latin | 52.61 | 70.24 | **75.83** |
+| MS | Malay | Latin | 53.52 | 71.36 | **77.33** |
+| TL | Filipino | Latin | 55.29 | 65.80 | **76.12** |
+| TH | Thai | Thai | 43.28 | 49.61 | **56.98** |
+| MY | Burmese | Myanmar | 42.56 | 53.50 | **66.43** |
+| TA | Tamil | Tamil | N/A | N/A | N/A |
 
 ---
 
@@ -159,6 +160,7 @@ Thai evaluation uses the **Thai Exam** benchmark (national standardized tests) i
 |-------|-----------|-------------|:----------:|:-----------------:|
 | `google/gemma-4-E4B-it` | 8B | Dense | ~15 GB | vLLM 0.19.0 |
 | `google/gemma-4-26B-A4B-it` | 26B (4B active) | MoE (128 experts, top-8) | ~52 GB | vLLM 0.19.0 |
+| `google/gemma-4-31B-it` | 31B | Dense | ~78 GB | vLLM 0.19.0 |
 
 ### Infrastructure
 
@@ -178,8 +180,10 @@ gemma4_SEA/
 ├── results/
 │   ├── gemma4-E4B-baseline/          # Gemma 4 E4B (8B) results
 │   │   └── gemma-4-E4B-it_seahelm_results.json
-│   └── gemma4-26B-MoE-baseline/      # Gemma 4 26B MoE results
-│       └── gemma-4-26B-A4B-it_seahelm_results.json
+│   ├── gemma4-26B-MoE-baseline/      # Gemma 4 26B MoE results
+│   │   └── gemma-4-26B-A4B-it_seahelm_results.json
+│   └── gemma4-31B-baseline/          # Gemma 4 31B Dense results
+│       └── gemma-4-31B-it_seahelm_results.json
 ├── configs/
 │   └── experiments.yaml               # Experiment configurations
 ├── scripts/
@@ -247,6 +251,14 @@ export FLASHINFER_DISABLE_VERSION_CHECK=1
   --model_name google/gemma-4-26B-A4B-it \
   --model_type vllm \
   --model_args "tensor_parallel_size=1,gpu_memory_utilization=0.9,max_model_len=8192"
+
+# Gemma 4 31B Dense
+.venv/bin/python src/seahelm_evaluation.py \
+  --tasks seahelm \
+  --output_dir ./results/gemma4-31B-baseline \
+  --model_name google/gemma-4-31B-it \
+  --model_type vllm \
+  --model_args "tensor_parallel_size=1,gpu_memory_utilization=0.95,max_model_len=8192"
 ```
 
 ---
