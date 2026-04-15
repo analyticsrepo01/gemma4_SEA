@@ -22,19 +22,67 @@ This project benchmarks Gemma 4 variants across **7 Southeast Asian languages** 
 
 > **Key Insight:** The 26B MoE model delivers a **+12.7 point average improvement** over the 8B dense model across all languages. The biggest gains are in Malay (+17.8) and Vietnamese (+17.6). Despite only 4B active parameters per token, the MoE architecture significantly outperforms the 8B dense model.
 
-### SEA-HELM Leaderboard Context
+### Cross-Model Comparison (SEA-HELM Leaderboard)
 
-| Model | Size | Active Params | Best Language Score (Knowledge) |
-|-------|-----:|:------------:|:------------------------------:|
-| SEA-LION v4 (Qwen) | 32B | 32B | 60.82 (overall)* |
-| Qwen 3 Next | 80B MoE | ~13B | 60.73 (overall)* |
-| SEA-LION v4 (Gemma) | 27B | 27B | 59.84 (overall)* |
-| Gemma 3 | 27B | 27B | 59.74 (overall)* |
-| **Gemma 4 26B MoE** | **26B** | **4B** | **72.82 (ID Knowledge)** |
-| **Gemma 4 E4B** | **8B** | **8B** | **59.77 (ID Knowledge)** |
-| Llama 4 Scout | 109B MoE | ~17B | 45.54 (MY)* |
+How Gemma 4 stacks up against **62 models** on the [official SEA-HELM leaderboard](https://leaderboard.sea-lion.ai/). Leaderboard scores are full-suite (all pillars); our Gemma 4 scores are Knowledge-pillar only.
 
-*\*Leaderboard scores are full-suite (all pillars). Our Knowledge-only scores are not directly comparable but show Gemma 4's strong knowledge capabilities in SEA languages.*
+> **[View Interactive Leaderboard →](leaderboard-seahelm/index.html)** — Searchable, sortable comparison across all 62 models with per-language breakdowns.
+
+#### Top 20 Models — SEA Overall Score
+
+| Rank | Model | Size | SEA Overall |
+|:----:|-------|-----:|:-----------:|
+| 1 | SEA-LION v4 (Qwen) | 32B | 60.82 |
+| 2 | Qwen 3 Next | 80B MoE | 60.73 |
+| 3 | Qwen 3 VL | 32B | 59.88 |
+| 4 | SEA-LION v4 (Gemma) | 27B | 59.84 |
+| 5 | Gemma 3 | 27B | 59.74 |
+| 6 | Qwen 3 | 32B | 58.60 |
+| 7 | SEA-LION v3 (Llama) | 70B | 57.65 |
+| 8 | Gemma 3 | 12B | 56.70 |
+| 9 | Llama 4 Scout | 109B MoE | 55.85 |
+| 10 | Qwen 3 (MoE) | 30B | 55.55 |
+| 11 | Llama 3.1 Tulu 3 | 70B | 54.67 |
+| 12 | Llama 3.3 | 70B | 53.28 |
+| 13 | Qwen 3 | 14B | 53.20 |
+| 14 | Qwen 2.5 | 72B | 52.97 |
+| 15 | SEA-LION v4 (Qwen VL) | 8B | 52.18 |
+| 16 | Qwen 3 VL | 8B | 51.58 |
+| 17 | Gemma 2 | 27B | 51.08 |
+| 18 | Qwen 2.5 | 32B | 50.07 |
+| 19 | SEA-LION v3 (Gemma) | 9B | 49.86 |
+| 20 | Llama 3.1 | 70B | 49.59 |
+
+#### Gemma Family Evolution
+
+| Model | Size | Architecture | SEA Overall | ID | TL | MS | VI |
+|-------|-----:|:-----------:|:-----------:|:--:|:--:|:--:|:--:|
+| Gemma 2 9B | 9B | Dense | 44.62 | — | — | — | — |
+| Gemma 2 27B | 27B | Dense | 51.08 | 59.79 | 61.19 | — | — |
+| Gemma 3 4B | 4B | Dense | 42.79 | — | — | — | — |
+| Gemma 3 12B | 12B | Dense | 56.70 | 61.80 | 65.00 | — | 59.07 |
+| Gemma 3 27B | 27B | Dense | 59.74 | 64.12 | 67.70 | 60.92 | 60.06 |
+| **Gemma 4 E4B** | **8B** | **Dense** | **—** | **59.77*** | **55.29*** | **53.52*** | **52.61*** |
+| **Gemma 4 26B MoE** | **26B** | **MoE** | **—** | **72.82*** | **65.80*** | **71.36*** | **70.24*** |
+
+*\*Knowledge pillar only (not full-suite). Leaderboard scores include all 5 pillars.*
+
+> **Generation leap:** Gemma 4 26B MoE surpasses Gemma 3 27B on knowledge tasks by **+8.7 points on Indonesian** and **+10.2 on Vietnamese**, despite having fewer active parameters per token (4B vs 27B).
+
+#### 8B-Class Model Comparison
+
+| Model | Size | SEA Overall |
+|-------|-----:|:-----------:|
+| Qwen 3 VL | 8B | 51.58 |
+| SEA-LION v4 (Qwen VL) | 8B | 52.18 |
+| Qwen 3 | 8B | 46.83 |
+| Gemma 2 | 9B | 44.62 |
+| SEA-LION v3 (Gemma) | 9B | 49.86 |
+| SEA-LION v3 (Llama) | 8B | 43.47 |
+| Llama 3.1 | 8B | 32.97 |
+| **Gemma 4 E4B** | **8B** | **59.77 (ID Knowledge)*** |
+
+*\*Knowledge-only score. The E4B's knowledge capability at 8B rivals models 3-4x larger on the leaderboard.*
 
 ---
 

@@ -1,0 +1,578 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Gemma 4 SEA-HELM Leaderboard</title>
+    <style>
+        :root {
+            --bg: #0f1117;
+            --card: #1a1d27;
+            --border: #2a2d3a;
+            --text: #e1e4eb;
+            --muted: #8b8fa3;
+            --accent: #4f8df9;
+            --accent-green: #34d399;
+            --accent-yellow: #fbbf24;
+            --accent-red: #f87171;
+            --highlight: #1e3a5f;
+        }
+
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+            background: var(--bg);
+            color: var(--text);
+            line-height: 1.6;
+        }
+
+        .container { max-width: 1200px; margin: 0 auto; padding: 2rem; }
+
+        header {
+            text-align: center;
+            padding: 3rem 0 2rem;
+            border-bottom: 1px solid var(--border);
+            margin-bottom: 2rem;
+        }
+
+        header h1 {
+            font-size: 2.2rem;
+            font-weight: 700;
+            margin-bottom: 0.5rem;
+            background: linear-gradient(135deg, #4f8df9, #34d399);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+
+        header p { color: var(--muted); font-size: 1.1rem; }
+
+        .stats-bar {
+            display: flex;
+            justify-content: center;
+            gap: 2rem;
+            margin: 1.5rem 0;
+            flex-wrap: wrap;
+        }
+
+        .stat {
+            background: var(--card);
+            border: 1px solid var(--border);
+            border-radius: 12px;
+            padding: 1rem 1.5rem;
+            text-align: center;
+            min-width: 140px;
+        }
+
+        .stat-value {
+            font-size: 1.8rem;
+            font-weight: 700;
+            color: var(--accent);
+        }
+
+        .stat-label { font-size: 0.85rem; color: var(--muted); }
+
+        .tabs {
+            display: flex;
+            gap: 0.5rem;
+            margin-bottom: 1.5rem;
+            flex-wrap: wrap;
+        }
+
+        .tab {
+            padding: 0.6rem 1.2rem;
+            border: 1px solid var(--border);
+            border-radius: 8px;
+            background: var(--card);
+            color: var(--muted);
+            cursor: pointer;
+            font-size: 0.9rem;
+            transition: all 0.2s;
+        }
+
+        .tab:hover { border-color: var(--accent); color: var(--text); }
+        .tab.active {
+            background: var(--accent);
+            color: white;
+            border-color: var(--accent);
+        }
+
+        .section { margin-bottom: 2.5rem; }
+
+        .section h2 {
+            font-size: 1.4rem;
+            margin-bottom: 1rem;
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+        }
+
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            background: var(--card);
+            border-radius: 12px;
+            overflow: hidden;
+            border: 1px solid var(--border);
+        }
+
+        th {
+            background: #151720;
+            padding: 0.8rem 1rem;
+            text-align: left;
+            font-weight: 600;
+            font-size: 0.85rem;
+            color: var(--muted);
+            text-transform: uppercase;
+            letter-spacing: 0.5px;
+            cursor: pointer;
+            user-select: none;
+            white-space: nowrap;
+        }
+
+        th:hover { color: var(--accent); }
+
+        th.sort-asc::after { content: ' \u25B2'; font-size: 0.7rem; }
+        th.sort-desc::after { content: ' \u25BC'; font-size: 0.7rem; }
+
+        td {
+            padding: 0.7rem 1rem;
+            border-top: 1px solid var(--border);
+            font-size: 0.95rem;
+        }
+
+        tr:hover { background: #1f2233; }
+        tr.gemma4 { background: var(--highlight); }
+        tr.gemma4:hover { background: #243d5f; }
+
+        .rank {
+            font-weight: 700;
+            width: 40px;
+            text-align: center;
+        }
+
+        .rank-1 { color: #fbbf24; }
+        .rank-2 { color: #c0c0c0; }
+        .rank-3 { color: #cd7f32; }
+
+        .model-name {
+            font-weight: 600;
+            max-width: 280px;
+        }
+
+        .model-name .tag {
+            display: inline-block;
+            font-size: 0.7rem;
+            padding: 0.1rem 0.4rem;
+            border-radius: 4px;
+            margin-left: 0.4rem;
+            font-weight: 500;
+            vertical-align: middle;
+        }
+
+        .tag-gemma4 { background: #1a4d2e; color: #34d399; }
+        .tag-moe { background: #3d2e1a; color: #fbbf24; }
+        .tag-new { background: #1a2d4d; color: #4f8df9; }
+
+        .score {
+            font-weight: 600;
+            text-align: right;
+        }
+
+        .score-high { color: var(--accent-green); }
+        .score-mid { color: var(--accent-yellow); }
+        .score-low { color: var(--accent-red); }
+
+        .bar-cell { width: 120px; }
+        .bar-bg {
+            background: #2a2d3a;
+            border-radius: 4px;
+            height: 8px;
+            overflow: hidden;
+        }
+        .bar-fill {
+            height: 100%;
+            border-radius: 4px;
+            transition: width 0.3s;
+        }
+
+        .size-cell {
+            text-align: right;
+            color: var(--muted);
+            font-size: 0.85rem;
+        }
+
+        .filter-bar {
+            display: flex;
+            gap: 1rem;
+            margin-bottom: 1rem;
+            align-items: center;
+            flex-wrap: wrap;
+        }
+
+        .search-input {
+            background: var(--card);
+            border: 1px solid var(--border);
+            border-radius: 8px;
+            padding: 0.5rem 1rem;
+            color: var(--text);
+            font-size: 0.9rem;
+            width: 250px;
+        }
+
+        .search-input:focus { outline: none; border-color: var(--accent); }
+
+        .legend {
+            display: flex;
+            gap: 1.5rem;
+            margin-top: 1rem;
+            color: var(--muted);
+            font-size: 0.85rem;
+            flex-wrap: wrap;
+        }
+
+        .legend-item { display: flex; align-items: center; gap: 0.3rem; }
+        .legend-dot {
+            width: 10px;
+            height: 10px;
+            border-radius: 50%;
+            display: inline-block;
+        }
+
+        footer {
+            text-align: center;
+            padding: 2rem 0;
+            color: var(--muted);
+            font-size: 0.85rem;
+            border-top: 1px solid var(--border);
+            margin-top: 2rem;
+        }
+
+        footer a { color: var(--accent); text-decoration: none; }
+        footer a:hover { text-decoration: underline; }
+
+        @media (max-width: 768px) {
+            .container { padding: 1rem; }
+            header h1 { font-size: 1.5rem; }
+            table { font-size: 0.85rem; }
+            td, th { padding: 0.5rem; }
+            .bar-cell { display: none; }
+        }
+    </style>
+</head>
+<body>
+
+<div class="container">
+    <header>
+        <h1>Gemma 4 on SEA-HELM</h1>
+        <p>Southeast Asian Holistic Evaluation of Language Models</p>
+        <div class="stats-bar">
+            <div class="stat">
+                <div class="stat-value">64</div>
+                <div class="stat-label">Models Compared</div>
+            </div>
+            <div class="stat">
+                <div class="stat-value">7</div>
+                <div class="stat-label">SEA Languages</div>
+            </div>
+            <div class="stat">
+                <div class="stat-value">72.82</div>
+                <div class="stat-label">Best Score (Gemma 4 26B)</div>
+            </div>
+            <div class="stat">
+                <div class="stat-value">+12.7</div>
+                <div class="stat-label">Avg E4B to 26B Gain</div>
+            </div>
+        </div>
+    </header>
+
+    <div class="section">
+        <h2>SEA-HELM Leaderboard with Gemma 4</h2>
+        <div class="tabs" id="viewTabs">
+            <div class="tab active" data-view="overall">SEA Overall</div>
+            <div class="tab" data-view="gemma">Gemma Family</div>
+            <div class="tab" data-view="perlang">Per Language</div>
+            <div class="tab" data-view="8b">8B Class</div>
+        </div>
+
+        <div class="filter-bar">
+            <input type="text" class="search-input" id="searchInput" placeholder="Search models...">
+        </div>
+
+        <table id="leaderboardTable">
+            <thead><tr id="tableHead"></tr></thead>
+            <tbody id="tableBody"></tbody>
+        </table>
+
+        <div class="legend">
+            <div class="legend-item"><div class="legend-dot" style="background:#34d399"></div> Gemma 4 (this study)</div>
+            <div class="legend-item"><div class="legend-dot" style="background:#4f8df9"></div> Score > 55</div>
+            <div class="legend-item"><div class="legend-dot" style="background:#fbbf24"></div> Score 35-55</div>
+            <div class="legend-item"><div class="legend-dot" style="background:#f87171"></div> Score &lt; 35</div>
+        </div>
+    </div>
+</div>
+
+<footer>
+    <p>Data: <a href="https://leaderboard.sea-lion.ai/">SEA-HELM Leaderboard</a> by AI Singapore | Gemma 4 evaluation by this project</p>
+    <p>Leaderboard scores are full-suite (all 5 pillars). Gemma 4 scores are Knowledge pillar only.</p>
+    <p style="margin-top:0.5rem"><a href="https://github.com/analyticsrepo01/gemma4_SEA">View on GitHub</a></p>
+</footer>
+
+<script>
+const DATA = {
+    overall: [
+        {rank:1, model:"SEA-LION v4 (Qwen)", size:"32B", score:60.82, org:"AI Singapore", isGemma4:false},
+        {rank:2, model:"Qwen 3 Next", size:"80B MoE", score:60.73, org:"Alibaba", isGemma4:false},
+        {rank:3, model:"Qwen 3 VL", size:"32B", score:59.88, org:"Alibaba", isGemma4:false},
+        {rank:4, model:"SEA-LION v4 (Gemma)", size:"27B", score:59.84, org:"AI Singapore", isGemma4:false},
+        {rank:5, model:"Gemma 3", size:"27B", score:59.74, org:"Google", isGemma4:false},
+        {rank:6, model:"Qwen 3", size:"32B", score:58.60, org:"Alibaba", isGemma4:false},
+        {rank:7, model:"SEA-LION v3 (Llama)", size:"70B", score:57.65, org:"AI Singapore", isGemma4:false},
+        {rank:8, model:"Gemma 3", size:"12B", score:56.70, org:"Google", isGemma4:false},
+        {rank:9, model:"Llama 4 Scout", size:"109B MoE", score:55.85, org:"Meta", isGemma4:false},
+        {rank:10, model:"Qwen 3 (MoE)", size:"30B", score:55.55, org:"Alibaba", isGemma4:false},
+        {rank:11, model:"Llama 3.1 Tulu 3", size:"70B", score:54.67, org:"AI2", isGemma4:false},
+        {rank:12, model:"Llama 3.3", size:"70B", score:53.28, org:"Meta", isGemma4:false},
+        {rank:13, model:"Qwen 3", size:"14B", score:53.20, org:"Alibaba", isGemma4:false},
+        {rank:14, model:"Qwen 2.5", size:"72B", score:52.97, org:"Alibaba", isGemma4:false},
+        {rank:15, model:"SEA-LION v4 (Qwen VL)", size:"8B", score:52.18, org:"AI Singapore", isGemma4:false},
+        {rank:16, model:"Qwen 3 VL", size:"8B", score:51.58, org:"Alibaba", isGemma4:false},
+        {rank:17, model:"Gemma 2", size:"27B", score:51.08, org:"Google", isGemma4:false},
+        {rank:18, model:"Qwen 2.5", size:"32B", score:50.07, org:"Alibaba", isGemma4:false},
+        {rank:19, model:"SEA-LION v3 (Gemma)", size:"9B", score:49.86, org:"AI Singapore", isGemma4:false},
+        {rank:20, model:"Llama 3.1", size:"70B", score:49.59, org:"Meta", isGemma4:false},
+        {rank:21, model:"Mistral Large", size:"123B", score:49.02, org:"Mistral", isGemma4:false},
+        {rank:22, model:"Command A", size:"111B", score:48.07, org:"Cohere", isGemma4:false},
+        {rank:23, model:"Qwen 3", size:"8B", score:46.83, org:"Alibaba", isGemma4:false},
+        {rank:24, model:"SEA-LION v4 (Qwen VL)", size:"4B", score:46.53, org:"AI Singapore", isGemma4:false},
+        {rank:25, model:"SEA-LION v4 (Gemma VL)", size:"4B", score:45.72, org:"AI Singapore", isGemma4:false},
+        {rank:26, model:"Qwen 3 VL", size:"4B", score:44.73, org:"Alibaba", isGemma4:false},
+        {rank:27, model:"Gemma 2", size:"9B", score:44.62, org:"Google", isGemma4:false},
+        {rank:28, model:"Qwen 2.5", size:"14B", score:43.75, org:"Alibaba", isGemma4:false},
+        {rank:29, model:"Qwen 3", size:"4B", score:43.56, org:"Alibaba", isGemma4:false},
+        {rank:30, model:"SEA-LION v3 (Llama)", size:"8B", score:43.47, org:"AI Singapore", isGemma4:false},
+        {rank:31, model:"MERaLiON 2", size:"10B", score:43.45, org:"I2R", isGemma4:false},
+        {rank:32, model:"Gemma 3", size:"4B", score:42.79, org:"Google", isGemma4:false},
+        {rank:33, model:"Aya Expanse", size:"32B", score:41.03, org:"Cohere", isGemma4:false},
+        {rank:34, model:"ERNIE 4.5", size:"21B MoE", score:40.38, org:"Baidu", isGemma4:false},
+        {rank:35, model:"Llama 3", size:"70B", score:39.22, org:"Meta", isGemma4:false},
+        {rank:36, model:"Ministral 3", size:"14B", score:37.89, org:"Mistral", isGemma4:false},
+        {rank:37, model:"Sailor2 Chat", size:"20B", score:36.93, org:"Sea AI Lab", isGemma4:false},
+        {rank:38, model:"Command R+", size:"104B", score:36.76, org:"Cohere", isGemma4:false},
+        {rank:39, model:"Qwen 2.5", size:"7B", score:36.35, org:"Alibaba", isGemma4:false},
+        {rank:40, model:"Apertus SEA-LION v4", size:"8B", score:36.33, org:"AI Singapore", isGemma4:false},
+        {rank:41, model:"Sailor2 Chat", size:"8B", score:35.81, org:"Sea AI Lab", isGemma4:false},
+        {rank:42, model:"OLMo 3.1", size:"32B", score:35.15, org:"AI2", isGemma4:false},
+        {rank:43, model:"OLMo 2", size:"32B", score:35.08, org:"AI2", isGemma4:false},
+        {rank:44, model:"Llama 3.1 Tulu 3", size:"8B", score:34.04, org:"AI2", isGemma4:false},
+        {rank:45, model:"Command R", size:"32B", score:33.98, org:"Cohere", isGemma4:false},
+        {rank:46, model:"Mistral Small 3.1", size:"24B", score:33.74, org:"Mistral", isGemma4:false},
+        {rank:47, model:"Llama 3.1", size:"8B", score:32.97, org:"Meta", isGemma4:false},
+        {rank:48, model:"Ministral 3", size:"8B", score:32.77, org:"Mistral", isGemma4:false},
+        {rank:49, model:"Apertus", size:"70B", score:31.37, org:"AI Singapore", isGemma4:false},
+        {rank:50, model:"Phi-4", size:"14B", score:30.30, org:"Microsoft", isGemma4:false},
+        {rank:51, model:"Aya Expanse", size:"8B", score:29.53, org:"Cohere", isGemma4:false},
+        {rank:52, model:"Babel Chat", size:"83B", score:27.66, org:"Babel", isGemma4:false},
+        {rank:53, model:"Apertus", size:"8B", score:26.56, org:"AI Singapore", isGemma4:false},
+        {rank:54, model:"Babel Chat", size:"9B", score:26.07, org:"Babel", isGemma4:false},
+        {rank:55, model:"Ministral 3", size:"3B", score:25.87, org:"Mistral", isGemma4:false},
+        {rank:56, model:"Llama 3", size:"8B", score:25.41, org:"Meta", isGemma4:false},
+        {rank:57, model:"SeaLLMs v3", size:"7B", score:25.04, org:"DAMO", isGemma4:false},
+        {rank:58, model:"OLMo 2", size:"13B", score:22.61, org:"AI2", isGemma4:false},
+        {rank:59, model:"OLMo 3", size:"7B", score:20.69, org:"AI2", isGemma4:false},
+        {rank:60, model:"Command R7B", size:"7B", score:20.37, org:"Cohere", isGemma4:false},
+        {rank:61, model:"Ministral", size:"8B", score:18.39, org:"Mistral", isGemma4:false},
+        {rank:62, model:"OLMo 2", size:"7B", score:15.11, org:"AI2", isGemma4:false},
+    ],
+    gemma4: {
+        e4b: {id:59.77, vi:52.61, ms:53.52, tl:55.29, th:43.28, my:42.56},
+        moe26b: {id:72.82, vi:70.24, ms:71.36, tl:65.80, th:49.61, my:53.50}
+    }
+};
+
+const GEMMA_FAMILY = [
+    {model:"Gemma 2", size:"9B", arch:"Dense", sea:44.62, id:"—", tl:"—", ms:"—", vi:"—", th:"—", my:"—", gen:2},
+    {model:"Gemma 2", size:"27B", arch:"Dense", sea:51.08, id:"59.79", tl:"61.19", ms:"—", vi:"—", th:"—", my:"—", gen:2},
+    {model:"Gemma 3", size:"4B", arch:"Dense", sea:42.79, id:"—", tl:"—", ms:"—", vi:"—", th:"—", my:"—", gen:3},
+    {model:"Gemma 3", size:"12B", arch:"Dense", sea:56.70, id:"61.80", tl:"65.00", ms:"—", vi:"59.07", th:"—", my:"—", gen:3},
+    {model:"Gemma 3", size:"27B", arch:"Dense", sea:59.74, id:"64.12", tl:"67.70", ms:"60.92", vi:"60.06", th:"—", my:"—", gen:3},
+    {model:"Gemma 4 E4B", size:"8B", arch:"Dense", sea:"—", id:"59.77", tl:"55.29", ms:"53.52", vi:"52.61", th:"43.28", my:"42.56", gen:4, isGemma4:true, note:"Knowledge only"},
+    {model:"Gemma 4 26B MoE", size:"26B", arch:"MoE (4B active)", sea:"—", id:"72.82", tl:"65.80", ms:"71.36", vi:"70.24", th:"49.61", my:"53.50", gen:4, isGemma4:true, note:"Knowledge only"},
+];
+
+const PERLANG = [
+    {model:"Gemma 4 26B MoE", id:72.82, vi:70.24, ms:71.36, tl:65.80, th:49.61, my:53.50, isGemma4:true},
+    {model:"Gemma 4 E4B (8B)", id:59.77, vi:52.61, ms:53.52, tl:55.29, th:43.28, my:42.56, isGemma4:true},
+    {model:"Gemma 3 27B", id:64.12, vi:60.06, ms:60.92, tl:67.70, th:"—", my:"—"},
+    {model:"Gemma 3 12B", id:61.80, vi:59.07, ms:"—", tl:65.00, th:"—", my:"—"},
+    {model:"Gemma 2 27B", id:59.79, vi:"—", ms:"—", tl:61.19, th:"—", my:"—"},
+    {model:"SEA-LION v4 (Qwen) 32B", id:66.59, vi:62.63, ms:61.36, tl:65.35, th:57.91, my:49.56},
+    {model:"Qwen 3 Next 80B", id:67.11, vi:65.68, ms:62.80, tl:66.48, th:58.09, my:44.88},
+    {model:"SEA-LION v4 (Gemma) 27B", id:"—", vi:"—", ms:61.10, tl:68.10, th:"—", my:47.18},
+    {model:"Llama 4 Scout 109B", id:"—", vi:"—", ms:"—", tl:"—", th:"—", my:45.54},
+];
+
+const EIGHT_B = DATA.overall.filter(m => {
+    const s = m.size;
+    return s === "7B" || s === "8B" || s === "9B" || s === "10B";
+});
+
+function scoreClass(v) {
+    if (typeof v !== 'number') return '';
+    if (v >= 55) return 'score-high';
+    if (v >= 35) return 'score-mid';
+    return 'score-low';
+}
+
+function barColor(v) {
+    if (v >= 55) return '#34d399';
+    if (v >= 35) return '#fbbf24';
+    return '#f87171';
+}
+
+function rankClass(r) {
+    if (r === 1) return 'rank-1';
+    if (r === 2) return 'rank-2';
+    if (r === 3) return 'rank-3';
+    return '';
+}
+
+function renderOverall(filter='') {
+    const head = document.getElementById('tableHead');
+    const body = document.getElementById('tableBody');
+    head.innerHTML = '<th>Rank</th><th>Model</th><th>Size</th><th>Organization</th><th>SEA Overall</th><th class="bar-cell"></th>';
+
+    let rows = DATA.overall;
+    // Insert Gemma 4 for reference
+    const g4rows = [
+        {rank:"*", model:"Gemma 4 26B MoE", size:"26B MoE", score:null, org:"Google", isGemma4:true, note:"Knowledge: 72.82 (ID)"},
+        {rank:"*", model:"Gemma 4 E4B", size:"8B", score:null, org:"Google", isGemma4:true, note:"Knowledge: 59.77 (ID)"},
+    ];
+    rows = [...rows, ...g4rows];
+
+    if (filter) {
+        rows = rows.filter(r => r.model.toLowerCase().includes(filter.toLowerCase()));
+    }
+
+    body.innerHTML = rows.map(r => {
+        const cls = r.isGemma4 ? ' class="gemma4"' : '';
+        const tag = r.isGemma4 ? '<span class="tag tag-gemma4">NEW</span>' : '';
+        const moeTag = r.size.includes('MoE') ? '<span class="tag tag-moe">MoE</span>' : '';
+        const scoreVal = r.score !== null ? r.score.toFixed(2) : (r.note || '—');
+        const scoreC = r.score !== null ? scoreClass(r.score) : '';
+        const barW = r.score !== null ? (r.score / 65 * 100) : 0;
+        const bColor = r.score !== null ? barColor(r.score) : '#333';
+        const rClass = typeof r.rank === 'number' ? rankClass(r.rank) : '';
+        return `<tr${cls}>
+            <td class="rank ${rClass}">${r.rank}</td>
+            <td class="model-name">${r.model}${tag}${moeTag}</td>
+            <td class="size-cell">${r.size}</td>
+            <td style="color:var(--muted);font-size:0.85rem">${r.org}</td>
+            <td class="score ${scoreC}">${scoreVal}</td>
+            <td class="bar-cell"><div class="bar-bg"><div class="bar-fill" style="width:${barW}%;background:${bColor}"></div></div></td>
+        </tr>`;
+    }).join('');
+}
+
+function renderGemma(filter='') {
+    const head = document.getElementById('tableHead');
+    const body = document.getElementById('tableBody');
+    head.innerHTML = '<th>Model</th><th>Size</th><th>Arch</th><th>SEA Overall</th><th>ID</th><th>VI</th><th>MS</th><th>TL</th><th>TH</th><th>MY</th>';
+
+    let rows = GEMMA_FAMILY;
+    if (filter) rows = rows.filter(r => r.model.toLowerCase().includes(filter.toLowerCase()));
+
+    body.innerHTML = rows.map(r => {
+        const cls = r.isGemma4 ? ' class="gemma4"' : '';
+        const tag = r.isGemma4 ? '<span class="tag tag-gemma4">NEW</span>' : '';
+        return `<tr${cls}>
+            <td class="model-name">${r.model}${tag}</td>
+            <td class="size-cell">${r.size}</td>
+            <td style="font-size:0.85rem;color:var(--muted)">${r.arch}</td>
+            <td class="score ${scoreClass(typeof r.sea === 'number' ? r.sea : null)}">${r.sea}</td>
+            <td class="score ${scoreClass(typeof r.id === 'number' ? parseFloat(r.id) : null)}">${r.id}</td>
+            <td class="score ${scoreClass(typeof r.vi === 'number' ? parseFloat(r.vi) : null)}">${r.vi}</td>
+            <td class="score ${scoreClass(typeof r.ms === 'number' ? parseFloat(r.ms) : null)}">${r.ms}</td>
+            <td class="score ${scoreClass(typeof r.tl === 'number' ? parseFloat(r.tl) : null)}">${r.tl}</td>
+            <td class="score ${scoreClass(typeof r.th === 'number' ? parseFloat(r.th) : null)}">${r.th}</td>
+            <td class="score ${scoreClass(typeof r.my === 'number' ? parseFloat(r.my) : null)}">${r.my}</td>
+        </tr>`;
+    }).join('');
+}
+
+function renderPerLang(filter='') {
+    const head = document.getElementById('tableHead');
+    const body = document.getElementById('tableBody');
+    head.innerHTML = '<th>Model</th><th>ID</th><th>VI</th><th>MS</th><th>TL</th><th>TH</th><th>MY</th>';
+
+    let rows = PERLANG;
+    if (filter) rows = rows.filter(r => r.model.toLowerCase().includes(filter.toLowerCase()));
+
+    body.innerHTML = rows.map(r => {
+        const cls = r.isGemma4 ? ' class="gemma4"' : '';
+        const tag = r.isGemma4 ? '<span class="tag tag-gemma4">NEW</span>' : '';
+        const fmt = v => typeof v === 'number' ? v.toFixed(2) : v;
+        const sc = v => typeof v === 'number' ? scoreClass(v) : '';
+        return `<tr${cls}>
+            <td class="model-name">${r.model}${tag}</td>
+            <td class="score ${sc(r.id)}">${fmt(r.id)}</td>
+            <td class="score ${sc(r.vi)}">${fmt(r.vi)}</td>
+            <td class="score ${sc(r.ms)}">${fmt(r.ms)}</td>
+            <td class="score ${sc(r.tl)}">${fmt(r.tl)}</td>
+            <td class="score ${sc(r.th)}">${fmt(r.th)}</td>
+            <td class="score ${sc(r.my)}">${fmt(r.my)}</td>
+        </tr>`;
+    }).join('');
+}
+
+function render8B(filter='') {
+    const head = document.getElementById('tableHead');
+    const body = document.getElementById('tableBody');
+    head.innerHTML = '<th>Rank</th><th>Model</th><th>Size</th><th>SEA Overall</th><th class="bar-cell"></th>';
+
+    let rows = [...EIGHT_B,
+        {rank:"*", model:"Gemma 4 E4B", size:"8B", score:null, org:"Google", isGemma4:true, note:"Knowledge: 59.77 (ID)"}
+    ].sort((a,b) => (b.score||0) - (a.score||0));
+
+    if (filter) rows = rows.filter(r => r.model.toLowerCase().includes(filter.toLowerCase()));
+
+    let i = 1;
+    body.innerHTML = rows.map(r => {
+        const cls = r.isGemma4 ? ' class="gemma4"' : '';
+        const tag = r.isGemma4 ? '<span class="tag tag-gemma4">NEW</span>' : '';
+        const scoreVal = r.score !== null ? r.score.toFixed(2) : (r.note || '—');
+        const scoreC = r.score !== null ? scoreClass(r.score) : '';
+        const barW = r.score !== null ? (r.score / 55 * 100) : 0;
+        const bColor = r.score !== null ? barColor(r.score) : '#333';
+        const rank = r.score !== null ? i++ : '*';
+        return `<tr${cls}>
+            <td class="rank">${rank}</td>
+            <td class="model-name">${r.model}${tag}</td>
+            <td class="size-cell">${r.size}</td>
+            <td class="score ${scoreC}">${scoreVal}</td>
+            <td class="bar-cell"><div class="bar-bg"><div class="bar-fill" style="width:${Math.min(barW,100)}%;background:${bColor}"></div></div></td>
+        </tr>`;
+    }).join('');
+}
+
+let currentView = 'overall';
+const views = { overall: renderOverall, gemma: renderGemma, perlang: renderPerLang, '8b': render8B };
+
+document.querySelectorAll('.tab').forEach(tab => {
+    tab.addEventListener('click', () => {
+        document.querySelectorAll('.tab').forEach(t => t.classList.remove('active'));
+        tab.classList.add('active');
+        currentView = tab.dataset.view;
+        views[currentView](document.getElementById('searchInput').value);
+    });
+});
+
+document.getElementById('searchInput').addEventListener('input', e => {
+    views[currentView](e.target.value);
+});
+
+renderOverall();
+</script>
+</body>
+</html>
