@@ -28,17 +28,17 @@ Gemma 4 supports a **thinking mode** (`enable_thinking=True`) where the model re
 
 | Language | E4B (No Think) | E4B (Think) | E4B Delta | 26B MoE (No Think) | 26B MoE (Think) | MoE Delta |
 |----------|:--------------:|:-----------:|:---------:|:------------------:|:---------------:|:---------:|
-| Indonesian (ID) | 59.77 | **72.43** | +12.66 | 72.82 | — | — |
-| Vietnamese (VI) | 52.61 | **57.04** | +4.43 | 70.24 | — | — |
-| Malay (MS) | 53.52 | **72.22** | +18.70 | 71.36 | — | — |
-| Filipino (TL) | 55.29 | **69.20** | +13.91 | 65.80 | — | — |
-| Thai (TH) | 43.28 | **64.76** | +21.48 | 49.61 | — | — |
-| Burmese (MY) | 42.56 | **60.38** | +17.82 | 53.50 | — | — |
-| **Average** | **51.17** | **65.84** | **+14.67** | **63.89** | **—** | **—** |
+| Indonesian (ID) | 59.77 | 72.43 | +12.66 | 72.82 | **87.93** | +15.11 |
+| Vietnamese (VI) | 52.61 | 57.04 | +4.43 | 70.24 | **79.08** | +8.84 |
+| Malay (MS) | 53.52 | 72.22 | +18.70 | 71.36 | **88.02** | +16.66 |
+| Filipino (TL) | 55.29 | 69.20 | +13.91 | 65.80 | **83.51** | +17.71 |
+| Thai (TH)† | 43.28 | 64.76 | +21.48 | 49.61 | **79.76** | +30.15 |
+| Burmese (MY) | 42.56 | 60.38 | +17.82 | 53.50 | **83.44** | +29.94 |
+| **Average** | **51.17** | **65.84** | **+14.67** | **63.89** | **83.62** | **+19.73** |
 
-> **Key Finding:** Thinking mode gives E4B a **+14.67 point average boost** — the 8B model with thinking (65.84) now outperforms the 26B MoE without thinking (63.89). Thai (+21.5) and Malay (+18.7) saw the largest gains. This demonstrates that chain-of-thought reasoning is especially valuable for low-resource SEA languages.
+> **Key Finding:** Thinking mode delivers massive improvements across both models. The 26B MoE with thinking achieves **83.62 avg** — a **+19.73 point boost** over no-think mode. This makes the 4B-active-parameter MoE competitive with models 8x its active size. The E4B (8B) with thinking (65.84) outperforms the 26B MoE without thinking (63.89). The largest gains are on Thai (+30.2) and Burmese (+29.9), demonstrating that chain-of-thought reasoning is especially valuable for low-resource SEA languages.
 >
-> *26B MoE thinking results pending — will be updated shortly.*
+> *†Thai scores based on 5/43 tasks due to inference timeouts with extended thinking tokens.*
 
 ### Cross-Model Comparison (SEA-HELM Leaderboard)
 
@@ -82,8 +82,9 @@ How Gemma 4 stacks up against **62 models** on the [official SEA-HELM leaderboar
 | Gemma 3 27B | 27B | Dense | 59.74 | 64.12 | 67.70 | 60.92 | 60.06 |
 | **Gemma 4 E4B** | **8B** | **Dense** | **—** | **59.77*** | **55.29*** | **53.52*** | **52.61*** |
 | **Gemma 4 E4B (Think)** | **8B** | **Dense** | **—** | **72.43*** | **69.20*** | **72.22*** | **57.04*** |
-| **Gemma 4 26B MoE** | **26B** | **MoE** | **—** | **72.82*** | **65.80*** | **71.36*** | **70.24*** |
-| **Gemma 4 31B** | **31B** | **Dense** | **—** | **78.77*** | **76.12*** | **77.33*** | **75.83*** |
+| **Gemma 4 26B MoE (No Think)** | **26B** | **MoE** | **—** | **72.82*** | **65.80*** | **71.36*** | **70.24*** |
+| **Gemma 4 26B MoE (Think)** | **26B** | **MoE** | **—** | **87.93*** | **83.51*** | **88.02*** | **79.08*** |
+| **Gemma 4 31B (No Think)** | **31B** | **Dense** | **—** | **78.77*** | **76.12*** | **77.33*** | **75.83*** |
 
 *\*Knowledge pillar only (not full-suite). Leaderboard scores include all 5 pillars.*
 

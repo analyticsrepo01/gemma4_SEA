@@ -57,6 +57,9 @@ results/qwen35-9B-baseline/
 results/qwen35-27B-baseline/
 scripts/run_competitor_evals.sh
 
+# Notebooks (reference only)
+intro_chat_completions_api*.ipynb
+
 # Large data files
 *.parquet
 *.arrow
