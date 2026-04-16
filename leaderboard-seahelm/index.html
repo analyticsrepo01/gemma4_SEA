@@ -268,7 +268,7 @@
         <p>Southeast Asian Holistic Evaluation of Language Models</p>
         <div class="stats-bar">
             <div class="stat">
-                <div class="stat-value">69</div>
+                <div class="stat-value">70</div>
                 <div class="stat-label">Models Compared</div>
             </div>
             <div class="stat">
@@ -406,11 +406,13 @@ const GEMMA_FAMILY = [
     {model:"Gemma 4 26B MoE", size:"26B", arch:"MoE (4B active)", sea:"63.89*", id:"72.82", tl:"65.80", ms:"71.36", vi:"70.24", th:"49.61", my:"53.50", gen:4, isGemma4:true, note:"No Think"},
     {model:"Gemma 4 26B MoE (Think)", size:"26B", arch:"MoE (4B active)", sea:"83.62*", id:"87.93", tl:"83.51", ms:"88.02", vi:"79.08", th:"79.76†", my:"83.44", gen:4, isGemma4:true, note:"Think +19.7"},
     {model:"Gemma 4 31B", size:"31B", arch:"Dense", sea:"71.91*", id:"78.77", tl:"76.12", ms:"77.33", vi:"75.83", th:"56.98", my:"66.43", gen:4, isGemma4:true, note:"No Think"},
+    {model:"Gemma 4 31B (Think)", size:"31B", arch:"Dense", sea:"—", id:"89.67", tl:"—", ms:"—", vi:"—", th:"—", my:"—", gen:4, isGemma4:true, note:"Think (partial)"},
 ];
 
 const PERLANG = [
     {model:"Gemma 4 31B Dense (No Think)", id:78.77, vi:75.83, ms:77.33, tl:76.12, th:56.98, my:66.43, isGemma4:true},
     {model:"Gemma 4 26B MoE (No Think)", id:72.82, vi:70.24, ms:71.36, tl:65.80, th:49.61, my:53.50, isGemma4:true},
+    {model:"Gemma 4 31B Dense (Think)", id:89.67, isGemma4:true, isNew:true},
     {model:"Gemma 4 26B MoE (Think)", id:87.93, vi:79.08, ms:88.02, tl:83.51, th:79.76, my:83.44, isGemma4:true, isNew:true},
     {model:"Gemma 4 E4B 8B (No Think)", id:59.77, vi:52.61, ms:53.52, tl:55.29, th:43.28, my:42.56, isGemma4:true},
     {model:"Gemma 4 E4B 8B (Think)", id:72.43, vi:57.04, ms:72.22, tl:69.20, th:64.76, my:60.38, isGemma4:true, isNew:true},

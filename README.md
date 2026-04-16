@@ -26,15 +26,15 @@ This project benchmarks Gemma 4 variants across **7 Southeast Asian languages** 
 
 Gemma 4 supports a **thinking mode** (`enable_thinking=True`) where the model reasons through problems before answering. This significantly boosts accuracy:
 
-| Language | E4B (No Think) | E4B (Think) | E4B Delta | 26B MoE (No Think) | 26B MoE (Think) | MoE Delta |
-|----------|:--------------:|:-----------:|:---------:|:------------------:|:---------------:|:---------:|
-| Indonesian (ID) | 59.77 | 72.43 | +12.66 | 72.82 | **87.93** | +15.11 |
-| Vietnamese (VI) | 52.61 | 57.04 | +4.43 | 70.24 | **79.08** | +8.84 |
-| Malay (MS) | 53.52 | 72.22 | +18.70 | 71.36 | **88.02** | +16.66 |
-| Filipino (TL) | 55.29 | 69.20 | +13.91 | 65.80 | **83.51** | +17.71 |
-| Thai (TH)† | 43.28 | 64.76 | +21.48 | 49.61 | **79.76** | +30.15 |
-| Burmese (MY) | 42.56 | 60.38 | +17.82 | 53.50 | **83.44** | +29.94 |
-| **Average** | **51.17** | **65.84** | **+14.67** | **63.89** | **83.62** | **+19.73** |
+| Language | E4B (No Think) | E4B (Think) | 26B MoE (No Think) | 26B MoE (Think) | 31B (No Think) | 31B (Think) |
+|----------|:--------------:|:-----------:|:------------------:|:---------------:|:--------------:|:-----------:|
+| Indonesian (ID) | 59.77 | 72.43 | 72.82 | 87.93 | 78.77 | **89.67** |
+| Vietnamese (VI) | 52.61 | 57.04 | 70.24 | **79.08** | 75.83 | — |
+| Malay (MS) | 53.52 | 72.22 | 71.36 | **88.02** | 77.33 | — |
+| Filipino (TL) | 55.29 | 69.20 | 65.80 | **83.51** | 76.12 | — |
+| Thai (TH)† | 43.28 | 64.76 | 49.61 | **79.76** | 56.98 | — |
+| Burmese (MY) | 42.56 | 60.38 | 53.50 | **83.44** | 66.43 | — |
+| **Average** | **51.17** | **65.84** | **63.89** | **83.62** | **71.91** | **—** |
 
 > **Key Finding:** Thinking mode delivers massive improvements across both models. The 26B MoE with thinking achieves **83.62 avg** — a **+19.73 point boost** over no-think mode. This makes the 4B-active-parameter MoE competitive with models 8x its active size. The E4B (8B) with thinking (65.84) outperforms the 26B MoE without thinking (63.89). The largest gains are on Thai (+30.2) and Burmese (+29.9), demonstrating that chain-of-thought reasoning is especially valuable for low-resource SEA languages.
 >
@@ -42,21 +42,21 @@ Gemma 4 supports a **thinking mode** (`enable_thinking=True`) where the model re
 
 ### Gemma 4 vs Qwen 3.5 27B — Knowledge Pillar
 
-| Language | 26B MoE (Think) | Qwen 3.5 27B | 31B (No Think) | E4B (Think) |
-|----------|:---------------:|:------------:|:--------------:|:-----------:|
-| Indonesian (ID) | **87.93** | 85.82 | 78.77 | 72.43 |
-| Vietnamese (VI) | 79.08 | **83.29** | 75.83 | 57.04 |
-| Malay (MS) | **88.02** | 84.51 | 77.33 | 72.22 |
-| Filipino (TL) | **83.51** | 82.78 | 76.12 | 69.20 |
-| Thai (TH)† | **79.76** | 75.64 | 56.98 | 64.76 |
-| Burmese (MY) | **83.44** | 77.94 | 66.43 | 60.38 |
-| **Average** | **83.62** | **81.66** | **71.91** | **65.84** |
+| Language | 31B (Think) | 26B MoE (Think) | Qwen 3.5 27B | 31B (No Think) | E4B (Think) |
+|----------|:-----------:|:---------------:|:------------:|:--------------:|:-----------:|
+| Indonesian (ID) | **89.67** | 87.93 | 85.82 | 78.77 | 72.43 |
+| Vietnamese (VI) | — | 79.08 | **83.29** | 75.83 | 57.04 |
+| Malay (MS) | — | **88.02** | 84.51 | 77.33 | 72.22 |
+| Filipino (TL) | — | **83.51** | 82.78 | 76.12 | 69.20 |
+| Thai (TH)† | — | **79.76** | 75.64 | 56.98 | 64.76 |
+| Burmese (MY) | — | **83.44** | 77.94 | 66.43 | 60.38 |
+| **Average** | **—** | **83.62** | **81.66** | **71.91** | **65.84** |
 
-> **Key Result:** Gemma 4 26B MoE with thinking (**83.62**) outperforms Qwen 3.5 27B (**81.66**) by +1.96 points — and does it with only **4B active parameters** vs Qwen's 27B dense. Gemma 4 leads on 5 out of 6 languages, with the largest margins on Burmese (+5.5) and Thai (+4.1). Qwen 3.5 retains an edge on Vietnamese (+4.2).
+> **Key Result:** Gemma 4 31B with thinking scores **89.67 on Indonesian** — the highest of any model tested, surpassing Qwen 3.5 27B by +3.85 points. The 26B MoE with thinking (**83.62**) outperforms Qwen 3.5 27B (**81.66**) with only **4B active parameters** vs Qwen's 27B dense. Gemma 4 leads on 5 out of 6 languages.
 >
 > Note: Qwen 3.5 27B uses thinking mode by default (`<think></think>` tags). Gemma 4 results shown with `enable_thinking=True` for a fair comparison.
 >
-> *†Thai scores based on 5/43 tasks due to inference timeouts with extended thinking tokens.*
+> *31B Think results are being updated as evaluation completes. †Thai scores based on 5/43 tasks due to inference timeouts.*
 
 ### Cross-Model Comparison (SEA-HELM Leaderboard)
 
@@ -103,6 +103,7 @@ How Gemma 4 stacks up against **62 models** on the [official SEA-HELM leaderboar
 | **Gemma 4 26B MoE (No Think)** | **26B** | **MoE** | **—** | **72.82*** | **65.80*** | **71.36*** | **70.24*** |
 | **Gemma 4 26B MoE (Think)** | **26B** | **MoE** | **—** | **87.93*** | **83.51*** | **88.02*** | **79.08*** |
 | **Gemma 4 31B (No Think)** | **31B** | **Dense** | **—** | **78.77*** | **76.12*** | **77.33*** | **75.83*** |
+| **Gemma 4 31B (Think)** | **31B** | **Dense** | **—** | **89.67*** | **—** | **—** | **—** |
 
 *\*Knowledge pillar only (not full-suite). Leaderboard scores include all 5 pillars.*
 
