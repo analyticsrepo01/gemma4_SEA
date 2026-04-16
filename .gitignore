@@ -49,12 +49,8 @@ logs/
 # Social media drafts
 linkedin.md
 
-# Competitor analysis (not published)
-qwen35_results.md
-
-# Competitor model results (not published)
+# Competitor model results (raw inference files)
 results/qwen35-9B-baseline/
-results/qwen35-27B-baseline/
 scripts/run_competitor_evals.sh
 
 # Notebooks (reference only)
