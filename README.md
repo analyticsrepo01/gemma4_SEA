@@ -22,6 +22,24 @@ This project benchmarks Gemma 4 variants across **7 Southeast Asian languages** 
 
 > **Key Insight:** The **31B dense model leads across all languages**, with the largest gains in Burmese (+23.9 over E4B) and Malay (+23.8). The 26B MoE (only 4B active params) delivers ~90% of 31B's performance — remarkable efficiency. Even the 8B E4B holds its own against much larger models on the leaderboard.
 
+### Thinking Mode — Unlocking Hidden Performance
+
+Gemma 4 supports a **thinking mode** (`enable_thinking=True`) where the model reasons through problems before answering. This significantly boosts accuracy:
+
+| Language | E4B (No Think) | E4B (Think) | E4B Delta | 26B MoE (No Think) | 26B MoE (Think) | MoE Delta |
+|----------|:--------------:|:-----------:|:---------:|:------------------:|:---------------:|:---------:|
+| Indonesian (ID) | 59.77 | **72.43** | +12.66 | 72.82 | — | — |
+| Vietnamese (VI) | 52.61 | **57.04** | +4.43 | 70.24 | — | — |
+| Malay (MS) | 53.52 | **72.22** | +18.70 | 71.36 | — | — |
+| Filipino (TL) | 55.29 | **69.20** | +13.91 | 65.80 | — | — |
+| Thai (TH) | 43.28 | **64.76** | +21.48 | 49.61 | — | — |
+| Burmese (MY) | 42.56 | **60.38** | +17.82 | 53.50 | — | — |
+| **Average** | **51.17** | **65.84** | **+14.67** | **63.89** | **—** | **—** |
+
+> **Key Finding:** Thinking mode gives E4B a **+14.67 point average boost** — the 8B model with thinking (65.84) now outperforms the 26B MoE without thinking (63.89). Thai (+21.5) and Malay (+18.7) saw the largest gains. This demonstrates that chain-of-thought reasoning is especially valuable for low-resource SEA languages.
+>
+> *26B MoE thinking results pending — will be updated shortly.*
+
 ### Cross-Model Comparison (SEA-HELM Leaderboard)
 
 How Gemma 4 stacks up against **62 models** on the [official SEA-HELM leaderboard](https://leaderboard.sea-lion.ai/). Leaderboard scores are full-suite (all pillars); our Gemma 4 scores are Knowledge-pillar only.
@@ -63,12 +81,15 @@ How Gemma 4 stacks up against **62 models** on the [official SEA-HELM leaderboar
 | Gemma 3 12B | 12B | Dense | 56.70 | 61.80 | 65.00 | — | 59.07 |
 | Gemma 3 27B | 27B | Dense | 59.74 | 64.12 | 67.70 | 60.92 | 60.06 |
 | **Gemma 4 E4B** | **8B** | **Dense** | **—** | **59.77*** | **55.29*** | **53.52*** | **52.61*** |
+| **Gemma 4 E4B (Think)** | **8B** | **Dense** | **—** | **72.43*** | **69.20*** | **72.22*** | **57.04*** |
 | **Gemma 4 26B MoE** | **26B** | **MoE** | **—** | **72.82*** | **65.80*** | **71.36*** | **70.24*** |
 | **Gemma 4 31B** | **31B** | **Dense** | **—** | **78.77*** | **76.12*** | **77.33*** | **75.83*** |
 
 *\*Knowledge pillar only (not full-suite). Leaderboard scores include all 5 pillars.*
 
 > **Generation leap:** Gemma 4 31B dense tops the knowledge charts at **78.77 on Indonesian** — a +14.65 point jump over Gemma 3 27B. The 26B MoE achieves ~93% of 31B's performance with only 4B active parameters per token.
+>
+> **Thinking mode unlock:** The E4B (8B) with thinking enabled jumps from 51.17 to 65.84 avg — a **+14.67 point boost** that makes the 8B model competitive with the 26B MoE (63.89) without thinking.
 
 #### Gemma 4 vs GPT-OSS-20B (OpenAI) — Knowledge Pillar
 
