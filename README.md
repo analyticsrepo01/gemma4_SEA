@@ -40,19 +40,19 @@ Gemma 4 supports a **thinking mode** (`enable_thinking=True`) where the model re
 
 ### Gemma 4 vs Qwen 3.5 27B — Knowledge Pillar
 
-| Language | 31B (Think) | Qwen 3.5 27B | 26B MoE (Think) | 31B (No Think) | E4B (Think) |
-|----------|:-----------:|:------------:|:---------------:|:--------------:|:-----------:|
-| Indonesian (ID) | 85.18 | **85.82** | 83.64 | 78.77 | 72.43 |
-| Vietnamese (VI) | 81.53 | **83.29** | 71.12 | 75.83 | 57.04 |
-| Malay (MS) | **84.22** | 84.51 | 81.73 | 77.33 | 72.22 |
-| Filipino (TL) | **85.33** | 82.78 | 78.79 | 76.12 | 69.20 |
-| Thai (TH) | **77.06** | 75.64 | 74.32 | 56.98 | 64.76 |
-| Burmese (MY) | **81.24** | 77.94 | 74.27 | 66.43 | 60.38 |
-| **Average** | **82.43** | **81.66** | **77.31** | **71.91** | **66.01** |
+| Language | 31B (Think) | Qwen 3.6 (3B active) | Qwen 3.5 27B | 26B MoE (Think) | 31B (No Think) |
+|----------|:-----------:|:--------------------:|:------------:|:---------------:|:--------------:|
+| Indonesian (ID) | **85.18** | 83.47 | *coming soon* | 83.64 | 78.77 |
+| Vietnamese (VI) | **81.53** | 81.71 | *coming soon* | 71.12 | 75.83 |
+| Malay (MS) | **84.22** | 81.84 | *coming soon* | 81.73 | 77.33 |
+| Filipino (TL) | **85.33** | 79.37 | *coming soon* | 78.79 | 76.12 |
+| Thai (TH) | **77.06** | 71.55 | *coming soon* | 74.32 | 56.98 |
+| Burmese (MY) | **81.24** | 70.50 | *coming soon* | 74.27 | 66.43 |
+| **Average** | **82.43** | **78.07** | *re-running* | **77.31** | **71.91** |
 
-> **Key Result:** Gemma 4 31B with thinking achieves **82.43 avg** — edging out Qwen 3.5 27B (**81.66**) by +0.77 points. The 31B leads on Filipino (+2.55), Thai (+1.42), and Burmese (+3.30), while Qwen leads on Indonesian (+0.64) and Vietnamese (+1.76). The 26B MoE with thinking (77.31) falls behind Qwen despite having only 4B active parameters — still impressive given the parameter efficiency.
+> **Key Result:** Gemma 4 31B with thinking leads at **82.43 avg**. The brand-new **Qwen 3.6** (35B total, only 3B active MoE) scores **78.07** — impressive efficiency but falls short of the 31B dense. Qwen 3.5 27B results are being re-evaluated for accuracy.
 >
-> Note: Qwen 3.5 27B uses thinking mode by default (`<think></think>` tags). Gemma 4 results shown with `enable_thinking=True` for a fair comparison.
+> Note: All Qwen models use thinking mode by default (`<think></think>` tags). Gemma 4 results shown with `enable_thinking=True` for a fair comparison.
 
 ### Cross-Model Comparison (SEA-HELM Leaderboard)
 

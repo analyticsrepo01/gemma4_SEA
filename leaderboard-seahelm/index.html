@@ -268,7 +268,7 @@
         <p>Southeast Asian Holistic Evaluation of Language Models</p>
         <div class="stats-bar">
             <div class="stat">
-                <div class="stat-value">71</div>
+                <div class="stat-value">72</div>
                 <div class="stat-label">Models Compared</div>
             </div>
             <div class="stat">
@@ -390,7 +390,8 @@ const DATA = {
         e4b_think: {id:72.43, vi:57.04, ms:72.22, tl:69.20, th:64.76, my:60.38},
         moe_think: {id:83.64, vi:71.12, ms:81.73, tl:78.79, th:74.32, my:74.27},
         dense31b_think: {id:85.18, vi:81.53, ms:84.22, tl:85.33, th:77.06, my:81.24},
-        qwen35_27b: {id:85.82, vi:83.29, ms:84.51, tl:82.78, th:75.64, my:77.94},
+        qwen35_27b: {id:0, vi:0, ms:0, tl:0, th:0, my:0}, // re-running eval
+        qwen36_35b: {id:83.47, vi:81.71, ms:81.84, tl:79.37, th:71.55, my:70.50},
         moe26b: {id:72.82, vi:70.24, ms:71.36, tl:65.80, th:49.61, my:53.50},
         dense31b: {id:78.77, vi:75.83, ms:77.33, tl:76.12, th:56.98, my:66.43}
     }
@@ -417,7 +418,8 @@ const PERLANG = [
     {model:"Gemma 4 26B MoE (Think)", id:83.64, vi:71.12, ms:81.73, tl:78.79, th:74.32, my:74.27, isGemma4:true, isNew:true},
     {model:"Gemma 4 E4B 8B (No Think)", id:59.77, vi:52.61, ms:53.52, tl:55.29, th:43.28, my:42.56, isGemma4:true},
     {model:"Gemma 4 E4B 8B (Think)", id:72.43, vi:57.04, ms:72.22, tl:69.20, th:64.76, my:60.38, isGemma4:true, isNew:true},
-    {model:"Qwen 3.5 27B (Think)", id:85.82, vi:83.29, ms:84.51, tl:82.78, th:75.64, my:77.94, isNew:true},
+    {model:"Qwen 3.5 27B (Think)", id:"—", vi:"—", ms:"—", tl:"—", th:"—", my:"—", isNew:true, note:"Re-running"},
+    {model:"Qwen 3.6 35B-A3B (Think)", id:83.47, vi:81.71, ms:81.84, tl:79.37, th:71.55, my:70.50, isNew:true},
     {model:"GPT-OSS-20B (3.6B active)", id:70.74, vi:69.93, ms:69.90, tl:71.84, th:60.11, my:49.19, isGemma4:false, isNew:true},
     {model:"Gemma 3 27B", id:64.12, vi:60.06, ms:60.92, tl:67.70, th:"—", my:"—"},
     {model:"Gemma 3 12B", id:61.80, vi:59.07, ms:"—", tl:65.00, th:"—", my:"—"},
@@ -465,11 +467,12 @@ function renderOverall(filter='') {
     const g4avg_31b_think = (85.18+81.53+84.22+85.33+77.06+81.24)/6; // ~82.43
     const g4avg_e4b = (59.77+52.61+53.52+55.29+43.28+42.56)/6;  // ~51.17
     const g4avg_e4b_think = (72.43+57.04+72.22+69.20+64.76+60.38)/6; // ~65.84
-    const qwen35_avg = (85.82+83.29+84.51+82.78+75.64+77.94)/6; // ~81.66
+    const qwen35_avg = 0; // re-running eval
+    const qwen36_avg = (83.47+81.71+81.84+79.37+71.55+70.50)/6; // ~78.07
     const gptoss_avg = (70.74+69.93+69.90+71.84+60.11+49.19)/6; // ~65.29
     const g4rows = [
         {rank:0, model:"Gemma 4 31B (Think)", size:"31B", score:parseFloat(g4avg_31b_think.toFixed(2)), org:"Google", isGemma4:true, knowledgeOnly:true},
-        {rank:0, model:"Qwen 3.5 27B (Think)", size:"27B", score:parseFloat(qwen35_avg.toFixed(2)), org:"Alibaba", isGemma4:false, knowledgeOnly:true},
+        {rank:0, model:"Qwen 3.6 35B-A3B (Think)", size:"35B MoE", score:parseFloat(qwen36_avg.toFixed(2)), org:"Alibaba", isGemma4:false, knowledgeOnly:true, isNew:true},
         {rank:0, model:"Gemma 4 26B MoE (Think)", size:"26B MoE", score:parseFloat(g4avg_moe_think.toFixed(2)), org:"Google", isGemma4:true, knowledgeOnly:true},
         {rank:0, model:"Gemma 4 31B (No Think)", size:"31B", score:parseFloat(g4avg_31b.toFixed(2)), org:"Google", isGemma4:true, knowledgeOnly:true},
         {rank:0, model:"GPT-OSS-20B", size:"21B MoE", score:parseFloat(gptoss_avg.toFixed(2)), org:"OpenAI", isGemma4:false, knowledgeOnly:true, isNew:true},
