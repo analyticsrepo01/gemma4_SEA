@@ -40,17 +40,17 @@ Gemma 4 supports a **thinking mode** (`enable_thinking=True`) where the model re
 
 ### Gemma 4 vs Qwen 3.5 27B — Knowledge Pillar
 
-| Language | 31B (Think) | Qwen 3.6 (3B active) | Qwen 3.5 27B | 26B MoE (Think) | 31B (No Think) |
-|----------|:-----------:|:--------------------:|:------------:|:---------------:|:--------------:|
-| Indonesian (ID) | **85.18** | 83.47 | *coming soon* | 83.64 | 78.77 |
-| Vietnamese (VI) | **81.53** | 81.71 | *coming soon* | 71.12 | 75.83 |
-| Malay (MS) | **84.22** | 81.84 | *coming soon* | 81.73 | 77.33 |
-| Filipino (TL) | **85.33** | 79.37 | *coming soon* | 78.79 | 76.12 |
-| Thai (TH) | **77.06** | 71.55 | *coming soon* | 74.32 | 56.98 |
-| Burmese (MY) | **81.24** | 70.50 | *coming soon* | 74.27 | 66.43 |
-| **Average** | **82.43** | **78.07** | *re-running* | **77.31** | **71.91** |
+| Language | 31B (Think) | Qwen 3.5 27B | Qwen 3.6 (3B active) | 26B MoE (Think) | 31B (No Think) |
+|----------|:-----------:|:------------:|:--------------------:|:---------------:|:--------------:|
+| Indonesian (ID) | 85.18 | **85.69** | 83.47 | 83.64 | 78.77 |
+| Vietnamese (VI) | 81.53 | **81.62** | 81.71 | 71.12 | 75.83 |
+| Malay (MS) | **84.22** | 83.42 | 81.84 | 81.73 | 77.33 |
+| Filipino (TL) | **85.33** | 81.39 | 79.37 | 78.79 | 76.12 |
+| Thai (TH) | **77.06** | 70.98 | 71.55 | 74.32 | 56.98 |
+| Burmese (MY) | **81.24** | 73.54 | 70.50 | 74.27 | 66.43 |
+| **Average** | **82.43** | **79.44** | **78.07** | **77.31** | **71.91** |
 
-> **Key Result:** Gemma 4 31B with thinking leads at **82.43 avg**. The brand-new **Qwen 3.6** (35B total, only 3B active MoE) scores **78.07** — impressive efficiency but falls short of the 31B dense. Qwen 3.5 27B results are being re-evaluated for accuracy.
+> **Key Result:** Gemma 4 31B with thinking leads at **82.43 avg** — beating Qwen 3.5 27B (**79.44**) by **+2.99 points**. The 31B leads on 4 out of 6 languages, with the largest margins on Filipino (+3.94) and Burmese (+7.70). The brand-new **Qwen 3.6** (35B total, only 3B active MoE) scores **78.07** — impressive efficiency but falls short of both the 31B dense and Qwen 3.5.
 >
 > Note: All Qwen models use thinking mode by default (`<think></think>` tags). Gemma 4 results shown with `enable_thinking=True` for a fair comparison.
 
